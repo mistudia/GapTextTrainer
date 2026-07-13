@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miStudia – Gap Text Trainer</title>
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a href="https://mistudia.com/" target="_blank" class="logo-link">
+        <img
+            src="images/mistudia-logo.png"
+            alt="miStudia Logo"
+            class="logo-large">
+    </a>
+
+<h1>miStudia – Gap Text Trainer</h1>
+
+</header>
+
+<nav class="language-selector">
+
+    <button
+        id="btn-de"
+        class="language-button active"
+        data-language="de">
+
+        🇩🇪 Deutsch
+
+    </button>
+
+    <button
+        id="btn-en"
+        class="language-button"
+        data-language="en">
+
+        🇺🇸 English
+
+    </button>
+
+    <button
+        id="btn-es"
+        class="language-button"
+        data-language="es">
+
+        🇪🇸 Español
+
+    </button>
+
+</nav>
+
+<section class="exercise-header">
+
+    <h3 id="exerciseTitle"></h3>
+
+    <p id="exerciseDescription"></p>
+
+</section>
+
+<main class="exercise-container">
+
+    <div id="exercise"></div>
+
+</main>
+
+<section class="controls">
+
+    <button
+        id="checkButton"
+        class="btn btn-check">
+
+        ✓ Auswerten
+
+    </button>
+
+    <button
+        id="solutionButton"
+        class="btn btn-solution">
+
+        📖 Lösungen anzeigen
+
+    </button>
+
+    <button
+        id="resetButton"
+        class="btn btn-reset">
+
+        🔄 Neu starten
+
+    </button>
+
+</section>
+
+<section class="result-panel">
+
+    <div id="result"></div>
+
+</section>
+
+<footer class="site-footer">
+
+    <hr>
+
+    <a href="https://mistudia.com/" target="_blank">
+
+        <img
+            src="images/mistudia-logo.png"
+            alt="miStudia Logo"
+            class="logo-small">
+
+    </a>
+
+    <p>© 2026 miStudia</p>
+
+    <p>
+        <a href="https://mistudia.com/" target="_blank">
+            mistudia.com
+        </a>
+    </p>
+
+</footer>
+
+<script src="js/data-de.js"></script>
+<script src="js/data-en.js"></script>
+<script src="js/data-es.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
