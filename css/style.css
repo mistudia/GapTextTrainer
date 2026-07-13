@@ -578,3 +578,26 @@ input:focus{
     }
 
 }
+
+/* ===========================================
+   Jubelelefant
+=========================================== */
+
+#jubelElefant{
+
+    position:fixed;
+
+    right:20px;
+    bottom:60px;
+
+    width:190px;
+
+    display:none;
+
+    z-index:10000;
+
+    pointer-events:none;
+
+}
+
+
