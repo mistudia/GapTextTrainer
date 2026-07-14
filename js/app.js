@@ -104,29 +104,31 @@ function buildExercise() {
 
 container.insertAdjacentHTML("beforeend", `
 ${item.before}
-<span class="gap">
-
 <input
+    class="gapInput"
     id="gap-${index}"
     data-index="${index}"
     autocomplete="off"
     spellcheck="false">
 
-<span class="verb">(${item.verb})</span>
+<span class="afterGap">
 
-<button
-    type="button"
-    class="hintButton"
-    data-index="${index}">
-💡
-</button>
+    <span class="verb">(${item.verb})</span>
 
-<span
-    class="hintText"
-    id="hint-${index}">
+    <button
+        type="button"
+        class="hintButton"
+        data-index="${index}">
+        💡
+    </button>
+
+    <span
+        class="hintText"
+        id="hint-${index}">
+    </span>
+
 </span>
 
-</span>
 ${item.after}
 `);
 
