@@ -230,14 +230,6 @@ input{
 
 }
 
-.gap{
-
-    display:inline-block;
-
-    white-space:nowrap;
-
-}
-
 input{
 
     width:150px;
@@ -597,6 +589,33 @@ input:focus{
     z-index:10000;
 
     pointer-events:none;
+
+}
+
+
+.predicate{
+
+    text-decoration: underline;
+
+    text-decoration-thickness: 2px;
+
+    text-underline-offset: 3px;
+
+    font-weight: 600;
+
+}
+
+.gapInput{
+
+    display:inline-block;
+
+    vertical-align:middle;
+
+}
+
+.afterGap{
+
+    white-space:nowrap;
 
 }
 
