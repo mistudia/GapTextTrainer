@@ -254,15 +254,15 @@ function showHint(index) {
     const item = App.data.story[index];
     const labels = App.data.labels;
 
-    const hints = [
+const hints = [
 
-        `${labels.signal}: ${item.signal}`,
+    `${labels.tense}: ${item.tense}`,
 
-        `${labels.tense}: ${item.tense}`,
+    `${labels.signal}: ${item.signal}`,
 
-        `${labels.formation}: ${item.formation}`
+    `${labels.formation}: ${item.formation}`
 
-    ];
+];
 
     const level =
         App.hintState[index] % hints.length;
