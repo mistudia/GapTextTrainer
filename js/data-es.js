@@ -46,11 +46,11 @@ const spanishExercise = {
 
     },
 
-    story: [
+  story: [
 
 {
 before:"Cada mañana Anna ",
-after:" una taza de café antes de empezar a trabajar. ",
+after:" un café antes de ir al trabajo. ",
 verb:"beber",
 answer:"bebe",
 signal:"cada mañana",
@@ -70,22 +70,22 @@ formation:"estar + gerundio"
 
 {
 before:"Ayer ",
-after:" muy temprano a la oficina. ",
-verb:"llegar",
-answer:"llegó",
+after:" un correo muy importante. ",
+verb:"recibir",
+answer:"recibió",
 signal:"ayer",
 tense:"Pretérito indefinido",
 formation:"pretérito indefinido"
 },
 
 {
-before:"Cuando llegó, su jefe la ",
-after:". ",
-verb:"esperar",
-answer:"estaba esperando",
-signal:"cuando llegó",
+before:"Mientras ",
+after:" a la oficina, sonó su teléfono. ",
+verb:"conducir",
+answer:"conducía",
+signal:"mientras",
 tense:"Pretérito imperfecto",
-formation:"imperfecto"
+formation:"pretérito imperfecto"
 },
 
 {
@@ -99,103 +99,53 @@ formation:"haber + participio"
 },
 
 {
-before:"También ",
-after:" varias veces a España. ",
-verb:"viajar",
-answer:"ha viajado",
-signal:"varias veces",
-tense:"Pretérito perfecto",
-formation:"haber + participio"
-},
-
-{
-before:"Antes de llegar a la oficina, su jefe ya ",
-after:" un correo importante. ",
-verb:"escribir",
-answer:"había escrito",
+before:"Antes de la reunión, su jefe ya ",
+after:" a todos los empleados. ",
+verb:"informar",
+answer:"había informado",
 signal:"antes de",
 tense:"Pluscuamperfecto",
 formation:"haber (imperfecto) + participio"
 },
 
 {
-before:"Estaba tranquila porque ya ",
-after:" todos los documentos. ",
-verb:"leer",
-answer:"había leído",
-signal:"ya",
-tense:"Pluscuamperfecto",
-formation:"haber + participio"
-},
-
-{
-before:"La próxima semana ",
+before:"La próxima semana Anna ",
 after:" a Madrid. ",
 verb:"viajar",
-answer:"viajará",
+answer:"va a viajar",
 signal:"la próxima semana",
-tense:"Futuro",
-formation:"terminaciones del futuro"
+tense:"Futuro próximo",
+formation:"ir a + infinitivo"
 },
 
 {
 before:"Allí ",
-after:" a varios socios internacionales. ",
+after:" a varios clientes nuevos. ",
 verb:"conocer",
 answer:"conocerá",
 signal:"acción futura",
-tense:"Futuro",
+tense:"Futuro simple",
 formation:"futuro simple"
 },
 
 {
-before:"Para finales de la próxima semana ya ",
+before:"Para el viernes ya ",
 after:" todas las reuniones. ",
 verb:"terminar",
 answer:"habrá terminado",
-signal:"para finales de...",
+signal:"para el viernes",
 tense:"Futuro perfecto",
 formation:"haber en futuro + participio"
 },
 
 {
-before:"Para entonces también ",
-after:" el nuevo contrato. ",
-verb:"firmar",
-answer:"habrá firmado",
-signal:"para entonces",
-tense:"Futuro perfecto",
-formation:"haber + participio"
-},
-
-{
-before:"Su jefe dice que Anna ",
-after:" una excelente empleada. ",
-verb:"ser",
-answer:"sea",
-signal:"dice que",
-tense:"Subjuntivo presente",
-formation:"subjuntivo presente"
-},
-
-{
-before:"Es posible que ya ",
-after:" mucha experiencia internacional. ",
-verb:"adquirir",
-answer:"haya adquirido",
-signal:"es posible que",
-tense:"Subjuntivo perfecto",
-formation:"haya + participio"
-},
-
-{
-before:"Si Anna tuviera más tiempo libre, ",
+before:"Si tuviera más tiempo, ",
 after:" otro idioma. ",
 verb:"aprender",
 answer:"aprendería",
 signal:"si",
-tense:"Condicional",
-formation:"condicional simple"
+tense:"Condicional simple",
+formation:"condicional"
 },
 
 {
@@ -209,45 +159,25 @@ formation:"habría + participio"
 },
 
 {
-before:"El nuevo contrato ",
-after:" ayer. ",
-verb:"firmar",
-answer:"fue firmado",
-signal:"voz pasiva",
-tense:"Pasiva",
-formation:"ser + participio"
+before:"Es importante que Anna ",
+after:" bien español. ",
+verb:"hablar",
+answer:"hable",
+signal:"es importante que",
+tense:"Presente de subjuntivo",
+formation:"subjuntivo presente"
 },
 
 {
-before:"El viaje ya ",
-after:" por su compañera. ",
-verb:"organizar",
-answer:"ha sido organizado",
-signal:"ya",
-tense:"Pretérito perfecto pasivo",
-formation:"haber + sido + participio"
-},
-
-{
-before:"Antes de la llegada de Anna todas las reuniones ",
-after:". ",
-verb:"organizar",
-answer:"habían sido organizadas",
-signal:"antes de",
-tense:"Pluscuamperfecto pasivo",
-formation:"habían sido + participio"
-},
-
-{
-before:"Para el viernes el informe ",
-after:". ",
-verb:"terminar",
-answer:"habrá sido terminado",
-signal:"para el viernes",
-tense:"Futuro perfecto pasivo",
-formation:"habrá sido + participio"
+before:"Es posible que ya ",
+after:" toda la información necesaria. ",
+verb:"recibir",
+answer:"haya recibido",
+signal:"es posible que",
+tense:"Pretérito perfecto de subjuntivo",
+formation:"haya + participio"
 }
 
-    ]
+]
 
 };
