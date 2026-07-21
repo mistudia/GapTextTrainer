@@ -232,4 +232,3 @@ const germanExercise = {
 ]
 
 };
-
