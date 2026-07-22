@@ -27,7 +27,7 @@ const spanishExercise = {
 
         tense: "💡 Tiempo verbal",
 
-        formation: "💡 Formación"
+        formation: "💡 Ejemplo"
 
     },
 
@@ -46,7 +46,7 @@ const spanishExercise = {
 
     },
 
-  story: [
+    story: [
 
 {
 before:"Cada mañana Anna ",
@@ -55,7 +55,7 @@ verb:"beber",
 answer:"bebe",
 signal:"cada mañana",
 tense:"Presente",
-formation:"verbo conjugado en presente"
+formation:"habla"
 },
 
 {
@@ -65,7 +65,7 @@ verb:"trabajar",
 answer:"está trabajando",
 signal:"ahora mismo",
 tense:"Presente continuo",
-formation:"estar + gerundio"
+formation:"está hablando"
 },
 
 {
@@ -75,7 +75,7 @@ verb:"recibir",
 answer:"recibió",
 signal:"ayer",
 tense:"Pretérito indefinido",
-formation:"pretérito indefinido"
+formation:"habló"
 },
 
 {
@@ -85,7 +85,7 @@ verb:"conducir",
 answer:"conducía",
 signal:"mientras",
 tense:"Pretérito imperfecto",
-formation:"pretérito imperfecto"
+formation:"hablaba"
 },
 
 {
@@ -95,7 +95,7 @@ verb:"trabajar",
 answer:"ha trabajado",
 signal:"ya",
 tense:"Pretérito perfecto",
-formation:"haber + participio"
+formation:"ha hablado"
 },
 
 {
@@ -105,7 +105,7 @@ verb:"informar",
 answer:"había informado",
 signal:"antes de",
 tense:"Pluscuamperfecto",
-formation:"haber (imperfecto) + participio"
+formation:"había hablado"
 },
 
 {
@@ -115,7 +115,7 @@ verb:"viajar",
 answer:"va a viajar",
 signal:"la próxima semana",
 tense:"Futuro próximo",
-formation:"ir a + infinitivo"
+formation:"va a hablar"
 },
 
 {
@@ -125,7 +125,7 @@ verb:"conocer",
 answer:"conocerá",
 signal:"acción futura",
 tense:"Futuro simple",
-formation:"futuro simple"
+formation:"hablará"
 },
 
 {
@@ -135,7 +135,7 @@ verb:"terminar",
 answer:"habrá terminado",
 signal:"para el viernes",
 tense:"Futuro perfecto",
-formation:"haber en futuro + participio"
+formation:"habrá hablado"
 },
 
 {
@@ -145,7 +145,7 @@ verb:"aprender",
 answer:"aprendería",
 signal:"si",
 tense:"Condicional simple",
-formation:"condicional"
+formation:"hablaría"
 },
 
 {
@@ -155,7 +155,7 @@ verb:"prepararse",
 answer:"se habría preparado",
 signal:"si hubiera...",
 tense:"Condicional compuesto",
-formation:"habría + participio"
+formation:"habría hablado"
 },
 
 {
@@ -165,7 +165,7 @@ verb:"hablar",
 answer:"hable",
 signal:"es importante que",
 tense:"Presente de subjuntivo",
-formation:"subjuntivo presente"
+formation:"hable"
 },
 
 {
@@ -175,7 +175,7 @@ verb:"recibir",
 answer:"haya recibido",
 signal:"es posible que",
 tense:"Pretérito perfecto de subjuntivo",
-formation:"haya + participio"
+formation:"haya hablado"
 }
 
 ]
