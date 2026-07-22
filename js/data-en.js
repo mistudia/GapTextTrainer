@@ -55,7 +55,7 @@ verb:"eat",
 answer:"eats",
 signal:"every morning",
 tense:"Simple Present",
-formation:"verb + s (3rd person singular)"
+formation:"plays"
 },
 
 {
@@ -65,7 +65,7 @@ verb:"work",
 answer:"is working",
 signal:"at the moment",
 tense:"Present Progressive",
-formation:"am/is/are + verb + ing"
+formation:"is playing"
 },
 
 {
@@ -75,7 +75,7 @@ verb:"receive",
 answer:"received",
 signal:"yesterday",
 tense:"Simple Past",
-formation:"2nd form of the verb"
+formation:"played"
 },
 
 {
@@ -85,7 +85,7 @@ verb:"drive",
 answer:"was driving",
 signal:"while",
 tense:"Past Progressive",
-formation:"was/were + verb + ing"
+formation:"was playing"
 },
 
 {
@@ -95,7 +95,7 @@ verb:"work",
 answer:"has worked",
 signal:"during her career",
 tense:"Present Perfect",
-formation:"has/have + past participle"
+formation:"has played"
 },
 
 {
@@ -105,7 +105,7 @@ verb:"learn",
 answer:"has been learning",
 signal:"for three years",
 tense:"Present Perfect Progressive",
-formation:"has/have been + verb + ing"
+formation:"has been playing"
 },
 
 {
@@ -115,7 +115,7 @@ verb:"inform",
 answer:"had informed",
 signal:"before",
 tense:"Past Perfect",
-formation:"had + past participle"
+formation:"had played"
 },
 
 {
@@ -125,7 +125,7 @@ verb:"wait",
 answer:"had been waiting",
 signal:"for twenty minutes before",
 tense:"Past Perfect Progressive",
-formation:"had been + verb + ing"
+formation:"had been playing"
 },
 
 {
@@ -135,7 +135,7 @@ verb:"travel",
 answer:"is going to travel",
 signal:"next week",
 tense:"Going-to Future",
-formation:"am/is/are going to + infinitive"
+formation:"is going to play"
 },
 
 {
@@ -145,7 +145,7 @@ verb:"give",
 answer:"will give",
 signal:"prediction / future",
 tense:"Will Future",
-formation:"will + infinitive"
+formation:"will play"
 },
 
 {
@@ -155,7 +155,7 @@ verb:"talk",
 answer:"will be talking",
 signal:"this time tomorrow",
 tense:"Future Progressive",
-formation:"will be + verb + ing"
+formation:"will be playing"
 },
 
 {
@@ -165,7 +165,7 @@ verb:"finish",
 answer:"will have finished",
 signal:"by Friday",
 tense:"Future Perfect",
-formation:"will have + past participle"
+formation:"will have played"
 },
 
 {
@@ -175,9 +175,8 @@ verb:"work",
 answer:"will have been working",
 signal:"by the end of the month / for six months",
 tense:"Future Perfect Progressive",
-formation:"will have been + verb + ing"
+formation:"will have been playing"
 }
-
 ]
 
 };
