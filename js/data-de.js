@@ -16,7 +16,8 @@ const germanExercise = {
     labels: {
         signal: "💡 Signal",
         tense: "💡 Zeitform",
-        formation: "💡 Bildung"
+    formation: "💡 Beispiel"
+
     },
 
     messages: {
@@ -36,7 +37,7 @@ const germanExercise = {
     answer:"trinkt",
     signal:"jeden Morgen",
     tense:"Präsens",
-    formation:"Verb im Präsens"
+formation:"spielt"                          // Präsens
 },
 
 {
@@ -46,7 +47,7 @@ const germanExercise = {
     answer:"arbeitet",
     signal:"im Moment",
     tense:"Präsens",
-    formation:"Verb im Präsens"
+formation:"spielt"                          // Präsens
 },
 
 {
@@ -56,7 +57,7 @@ const germanExercise = {
     answer:"fuhr",
     signal:"gestern",
     tense:"Präteritum",
-    formation:"Präteritum"
+formation:"spielte"                         // Präteritum
 },
 
 {
@@ -66,7 +67,7 @@ const germanExercise = {
     answer:"traf",
     signal:"Erzählung in der Vergangenheit",
     tense:"Präteritum",
-    formation:"Präteritum"
+formation:"spielte"                         // Präteritum
 },
 
 {
@@ -76,7 +77,7 @@ const germanExercise = {
     answer:"hat",
     signal:"bereits",
     tense:"Perfekt",
-    formation:"haben + Partizip II"
+formation:"hat gespielt"                    // Perfekt (haben)
 },
 
 {
@@ -86,7 +87,7 @@ const germanExercise = {
     answer:"ist",
     signal:"schon mehrmals",
     tense:"Perfekt",
-    formation:"sein + Partizip II"
+formation:"ist gewandert"                   // Perfekt (sein)
 },
 
 {
@@ -96,7 +97,7 @@ const germanExercise = {
     answer:"hatte",
     signal:"bevor",
     tense:"Plusquamperfekt",
-    formation:"hatte + Partizip II"
+formation:"hatte gespielt"                  // Plusquamperfekt
 },
 
 {
@@ -106,7 +107,7 @@ const germanExercise = {
     answer:"gelesen hatte",
     signal:"vorher",
     tense:"Plusquamperfekt",
-    formation:"Partizip II + hatte"
+formation:"hatte gespielt"                  // Plusquamperfekt
 },
 
 {
@@ -116,7 +117,7 @@ const germanExercise = {
     answer:"wird",
     signal:"nächste Woche",
     tense:"Futur I",
-    formation:"werden + Infinitiv"
+formation:"wird spielen"                    // Futur I
 },
 
 {
@@ -126,7 +127,7 @@ const germanExercise = {
     answer:"wird",
     signal:"zukünftige Handlung",
     tense:"Futur I",
-    formation:"werden + Infinitiv"
+formation:"wird spielen"                    // Futur I
 },
 
 {
@@ -136,7 +137,7 @@ const germanExercise = {
     answer:"wird",
     signal:"bis Ende der nächsten Woche",
     tense:"Futur II",
-    formation:"werden + Partizip II + haben"
+formation:"wird gespielt haben"             // Futur II
 },
 
 {
@@ -146,7 +147,7 @@ const germanExercise = {
     answer:"wird",
     signal:"bis dahin",
     tense:"Futur II",
-    formation:"werden + Partizip II + haben"
+formation:"wird gespielt haben"             // Futur II
 },
 
 {
@@ -156,7 +157,7 @@ const germanExercise = {
     answer:"sei",
     signal:"indirekte Rede",
     tense:"Konjunktiv I",
-    formation:"Konjunktiv I"
+formation:"spiele"                          // Konjunktiv I
 },
 
 {
@@ -166,7 +167,7 @@ const germanExercise = {
     answer:"habe",
     signal:"indirekte Rede",
     tense:"Konjunktiv I Perfekt",
-    formation:"habe + Partizip II"
+formation:"habe gespielt"                   // Konjunktiv I Perfekt
 },
 
 {
@@ -176,7 +177,7 @@ const germanExercise = {
     answer:"würde",
     signal:"wenn",
     tense:"Konjunktiv II",
-    formation:"würde + Infinitiv"
+formation:"würde spielen"                   // Konjunktiv II
 },
 
 {
@@ -186,7 +187,7 @@ const germanExercise = {
     answer:"hätte",
     signal:"wenn ... hätte",
     tense:"Konjunktiv II Vergangenheit",
-    formation:"hätte + Partizip II"
+formation:"hätte gespielt"                  // Konjunktiv II Vergangenheit
 },
 
 {
@@ -196,7 +197,7 @@ const germanExercise = {
     answer:"wurde",
     signal:"von der Geschäftsleitung",
     tense:"Präteritum Passiv",
-    formation:"wurde + Partizip II"
+formation:"wurde gespielt"                  // Präteritum Passiv
 },
 
 {
@@ -206,7 +207,7 @@ const germanExercise = {
     answer:"ist",
     signal:"Passiv",
     tense:"Perfekt Passiv",
-    formation:"ist + Partizip II + worden"
+formation:"ist gespielt worden"             // Perfekt Passiv
 },
 
 {
@@ -216,7 +217,7 @@ const germanExercise = {
     answer:"waren",
     signal:"vor Annas Ankunft",
     tense:"Plusquamperfekt Passiv",
-    formation:"waren + Partizip II + worden"
+formation:"war gespielt worden"             // Plusquamperfekt Passiv
 },
 
 {
@@ -226,7 +227,7 @@ const germanExercise = {
     answer:"wird",
     signal:"bis Freitag",
     tense:"Futur II Passiv",
-    formation:"werden + Partizip II + worden sein"
+formation:"wird gespielt worden sein"       // Futur II Passiv
 }
 
 ]
