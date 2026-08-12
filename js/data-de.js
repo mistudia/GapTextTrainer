@@ -72,9 +72,11 @@ formation:"spielte"                         // Präteritum
 
 {
     before:"Anna ",
-    after:" bereits an mehreren internationalen Projekten <span class='predicate'>gearbeitet</span>. ",
-    verb:"haben",
+    mid:" bereits an mehreren internationalen Projekten ",
+    after:". ",
+    verb:"arbeiten",
     answer:"hat",
+    answer2:"gearbeitet",
     signal:"bereits",
     tense:"Perfekt",
 formation:"hat gespielt"                    // Perfekt (haben)
@@ -82,9 +84,11 @@ formation:"hat gespielt"                    // Perfekt (haben)
 
 {
     before:"Außerdem ",
-    after:" sie schon mehrmals nach Spanien <span class='predicate'>gereist</span>. ",
-    verb:"sein",
+    mid:" sie schon mehrmals nach Spanien ",
+    after:". ",
+    verb:"reisen",
     answer:"ist",
+    answer2:"gereist",
     signal:"schon mehrmals",
     tense:"Perfekt",
 formation:"ist gewandert"                   // Perfekt (sein)
@@ -92,9 +96,11 @@ formation:"ist gewandert"                   // Perfekt (sein)
 
 {
     before:"Bevor Anna gestern ins Büro kam, ",
-    after:" ihr Chef bereits eine wichtige E-Mail <span class='predicate'>geschrieben</span>. ",
-    verb:"haben",
+    mid:" ihr Chef bereits eine wichtige E-Mail ",
+    after:". ",
+    verb:"schreiben",
     answer:"hatte",
+    answer2:"geschrieben",
     signal:"bevor",
     tense:"Plusquamperfekt",
 formation:"hatte gespielt"                  // Plusquamperfekt
@@ -112,9 +118,11 @@ formation:"hatte gespielt"                  // Plusquamperfekt
 
 {
     before:"Nächste Woche ",
-    after:" Anna nach Madrid <span class='predicate'>reisen</span>. ",
-    verb:"werden",
+    mid:" Anna nach Madrid ",
+    after:". ",
+    verb:"reisen",
     answer:"wird",
+    answer2:"reisen",
     signal:"nächste Woche",
     tense:"Futur I",
 formation:"wird spielen"                    // Futur I
@@ -122,9 +130,11 @@ formation:"wird spielen"                    // Futur I
 
 {
     before:"Dort ",
-    after:" sie mehrere internationale Geschäftspartner <span class='predicate'>treffen</span>. ",
-    verb:"werden",
+    mid:" sie mehrere internationale Geschäftspartner ",
+    after:". ",
+    verb:"treffen",
     answer:"wird",
+    answer2:"treffen",
     signal:"zukünftige Handlung",
     tense:"Futur I",
 formation:"wird spielen"                    // Futur I
@@ -132,9 +142,11 @@ formation:"wird spielen"                    // Futur I
 
 {
     before:"Bis Ende der nächsten Woche ",
-    after:" Anna alle wichtigen Gespräche <span class='predicate'>geführt haben</span>. ",
-    verb:"werden",
+    mid:" Anna alle wichtigen Gespräche ",
+    after:". ",
+    verb:"führen",
     answer:"wird",
+    answer2:"geführt haben",
     signal:"bis Ende der nächsten Woche",
     tense:"Futur II",
 formation:"wird gespielt haben"             // Futur II
@@ -142,9 +154,11 @@ formation:"wird gespielt haben"             // Futur II
 
 {
     before:"Bis dahin ",
-    after:" sie auch den neuen Vertrag <span class='predicate'>unterschrieben haben</span>. ",
-    verb:"werden",
+    mid:" sie auch den neuen Vertrag ",
+    after:". ",
+    verb:"unterschreiben",
     answer:"wird",
+    answer2:"unterschrieben haben",
     signal:"bis dahin",
     tense:"Futur II",
 formation:"wird gespielt haben"             // Futur II
@@ -162,9 +176,11 @@ formation:"spiele"                          // Konjunktiv I
 
 {
     before:"Er erklärt außerdem, Anna ",
-    after:" bereits viel internationale Erfahrung <span class='predicate'>gesammelt</span>. ",
-    verb:"haben",
+    mid:" bereits viel internationale Erfahrung ",
+    after:". ",
+    verb:"sammeln",
     answer:"habe",
+    answer2:"gesammelt",
     signal:"indirekte Rede",
     tense:"Konjunktiv I Perfekt",
 formation:"habe gespielt"                   // Konjunktiv I Perfekt
@@ -172,9 +188,11 @@ formation:"habe gespielt"                   // Konjunktiv I Perfekt
 
 {
     before:"Wenn Anna mehr Freizeit hätte, ",
-    after:" sie noch eine weitere Sprache <span class='predicate'>lernen</span>. ",
-    verb:"werden",
+    mid:" sie noch eine weitere Sprache ",
+    after:". ",
+    verb:"lernen",
     answer:"würde",
+    answer2:"lernen",
     signal:"wenn",
     tense:"Konjunktiv II",
 formation:"würde spielen"                   // Konjunktiv II
@@ -182,9 +200,11 @@ formation:"würde spielen"                   // Konjunktiv II
 
 {
     before:"Wenn sie früher von dem Projekt gewusst hätte, ",
-    after:" sie sich noch besser <span class='predicate'>vorbereitet</span>. ",
-    verb:"haben",
+    mid:" sie sich noch besser ",
+    after:". ",
+    verb:"vorbereiten",
     answer:"hätte",
+    answer2:"vorbereitet",
     signal:"wenn ... hätte",
     tense:"Konjunktiv II Vergangenheit",
 formation:"hätte gespielt"                  // Konjunktiv II Vergangenheit
@@ -192,9 +212,11 @@ formation:"hätte gespielt"                  // Konjunktiv II Vergangenheit
 
 {
     before:"Der neue Vertrag ",
-    after:" gestern von der Geschäftsleitung <span class='predicate'>unterschrieben</span>. ",
-    verb:"werden",
+    mid:" gestern von der Geschäftsleitung ",
+    after:". ",
+    verb:"unterschreiben",
     answer:"wurde",
+    answer2:"unterschrieben",
     signal:"von der Geschäftsleitung",
     tense:"Präteritum Passiv",
 formation:"wurde gespielt"                  // Präteritum Passiv
@@ -202,9 +224,11 @@ formation:"wurde gespielt"                  // Präteritum Passiv
 
 {
     before:"Die Reise ",
-    after:" bereits von Annas Kollegin <span class='predicate'>organisiert worden</span>. ",
-    verb:"sein",
+    mid:" bereits von Annas Kollegin ",
+    after:". ",
+    verb:"organisieren",
     answer:"ist",
+    answer2:"organisiert worden",
     signal:"Passiv",
     tense:"Perfekt Passiv",
 formation:"ist gespielt worden"             // Perfekt Passiv
@@ -212,9 +236,11 @@ formation:"ist gespielt worden"             // Perfekt Passiv
 
 {
     before:"Vor Annas Ankunft ",
-    after:" alle wichtigen Termine bereits <span class='predicate'>vereinbart worden</span>. ",
-    verb:"sein",
+    mid:" alle wichtigen Termine bereits ",
+    after:". ",
+    verb:"vereinbaren",
     answer:"waren",
+    answer2:"vereinbart worden",
     signal:"vor Annas Ankunft",
     tense:"Plusquamperfekt Passiv",
 formation:"war gespielt worden"             // Plusquamperfekt Passiv
@@ -222,9 +248,11 @@ formation:"war gespielt worden"             // Plusquamperfekt Passiv
 
 {
     before:"Bis Freitag ",
-    after:" der endgültige Bericht <span class='predicate'>fertiggestellt worden sein</span>. ",
-    verb:"werden",
+    mid:" der endgültige Bericht ",
+    after:". ",
+    verb:"fertigstellen",
     answer:"wird",
+    answer2:"fertiggestellt worden sein",
     signal:"bis Freitag",
     tense:"Futur II Passiv",
 formation:"wird gespielt worden sein"       // Futur II Passiv
