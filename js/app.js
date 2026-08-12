@@ -14,7 +14,8 @@ const App = {
 const Data = {
     de: germanExercise,
     en: englishExercise,
-    es: spanishExercise
+    es: spanishExercise,
+    zh: chineseExercise
 };
 
 document.addEventListener("DOMContentLoaded", init);
@@ -102,15 +103,35 @@ function buildExercise() {
 
         App.hintState.push(0);
 
-container.insertAdjacentHTML("beforeend", `
+const hasSecondGap = item.answer2 !== undefined;
+
+let html = `
 ${item.before}
 <input
     class="gapInput"
-    id="gap-${index}"
-    data-index="${index}"
+    id="gap-${index}-0"
+    data-item="${index}"
+    data-gap="0"
     autocomplete="off"
     spellcheck="false">
+`;
 
+if (hasSecondGap) {
+
+    html += `
+${item.mid}
+<input
+    class="gapInput"
+    id="gap-${index}-1"
+    data-item="${index}"
+    data-gap="1"
+    autocomplete="off"
+    spellcheck="false">
+`;
+
+}
+
+html += `
 <span class="afterGap">
 
     <span class="verb">(${item.verb})</span>
@@ -130,7 +151,9 @@ ${item.before}
 </span>
 
 ${item.after}
-`);
+`;
+
+container.insertAdjacentHTML("beforeend", html);
 
 
     });
@@ -154,6 +177,10 @@ function initInputs() {
     App.inputs.forEach((input, index) => {
 
         input.dataset.index = index;
+        // input.dataset.item / input.dataset.gap were already set
+        // when the input was created in buildExercise() and tell us
+        // which story item and which gap (0 = first, 1 = second) this
+        // field belongs to.
 
         input.addEventListener("keydown", handleKeyDown);
 
@@ -277,11 +304,17 @@ const hints = [
 
 function checkSingleInput(input) {
 
-    const index =
-        Number(input.dataset.index);
+    const itemIndex =
+        Number(input.dataset.item);
+
+    const gap =
+        Number(input.dataset.gap);
+
+    const item =
+        App.data.story[itemIndex];
 
     const answer =
-        App.data.story[index].answer;
+        gap === 1 ? item.answer2 : item.answer;
 
     const correct =
         normalize(input.value) ===
@@ -344,7 +377,7 @@ function checkAnswers() {
 
 function showResult(correct) {
 
-    const total = App.data.story.length;
+    const total = App.inputs.length;
 
     const percent = Math.round(
         (correct / total) * 100
@@ -383,11 +416,18 @@ else if (percent >= 80) {
 
 function showSolutions() {
 
-    App.inputs.forEach((input, index) => {
+    App.inputs.forEach(input => {
 
-        const item = App.data.story[index];
+        const itemIndex =
+            Number(input.dataset.item);
 
-        input.value = item.answer;
+        const gap =
+            Number(input.dataset.gap);
+
+        const item = App.data.story[itemIndex];
+
+        input.value =
+            gap === 1 ? item.answer2 : item.answer;
 
         input.classList.remove(
             "wrong",
@@ -398,7 +438,7 @@ function showSolutions() {
         input.classList.add("correct");
 
         document.getElementById(
-            "hint-" + index
+            "hint-" + itemIndex
         ).textContent =
             `${App.data.labels.formation}: ${item.formation}`;
 
