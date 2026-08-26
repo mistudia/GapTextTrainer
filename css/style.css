@@ -377,9 +377,11 @@ input:focus{
 
 .controls{
 
-    display:flex;
+    display:grid;
 
-    justify-content:center;
+    grid-template-columns:1fr auto auto 1fr;
+
+    align-items:center;
 
     gap:12px;
 
@@ -389,9 +391,33 @@ input:focus{
 
     box-shadow:var(--shadow);
 
-    flex-wrap:wrap;
-
     margin-bottom:20px;
+
+}
+
+#checkButton{
+
+    grid-row:1;
+
+    grid-column:2;
+
+}
+
+#resetButton{
+
+    grid-row:1;
+
+    grid-column:3;
+
+}
+
+#solutionButton{
+
+    grid-row:1;
+
+    grid-column:4;
+
+    justify-self:end;
 
 }
 
@@ -427,7 +453,19 @@ input:focus{
 
 .btn-solution{
 
+    background:transparent;
+
+    color:var(--success);
+
+    border:2px solid var(--success);
+
+}
+
+.btn-solution:hover{
+
     background:var(--success);
+
+    color:white;
 
 }
 
@@ -553,7 +591,15 @@ input:focus{
 
     .controls{
 
+        display:flex;
+
         flex-direction:column;
+
+    }
+
+    #solutionButton{
+
+        justify-self:auto;
 
     }
 
@@ -619,4 +665,115 @@ input:focus{
 
 }
 
+/* ===========================================
+   Pinyin-Tooltip (Chinesisch)
+=========================================== */
 
+.pinyin-tooltip{
+
+    position:relative;
+
+    cursor:help;
+
+    border-bottom:1px dotted var(--text-light);
+
+}
+
+.pinyin-tooltip::after{
+
+    content:attr(data-pinyin);
+
+    position:absolute;
+
+    left:50%;
+    bottom:calc(100% + 8px);
+
+    transform:
+    translateX(-50%)
+    translateY(4px);
+
+    background:var(--text);
+
+    color:white;
+
+    font-size:.8rem;
+    font-weight:normal;
+    line-height:1.3;
+    white-space:nowrap;
+
+    padding:5px 10px;
+
+    border-radius:6px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.18);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:
+    opacity .15s ease,
+    transform .15s ease;
+
+    z-index:20;
+
+}
+
+.pinyin-tooltip::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:calc(100% + 2px);
+
+    transform:
+    translateX(-50%)
+    translateY(4px);
+
+    border:6px solid transparent;
+    border-top-color:var(--text);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:
+    opacity .15s ease,
+    transform .15s ease;
+
+    z-index:20;
+
+}
+
+.pinyin-tooltip:hover::after,
+.pinyin-tooltip:hover::before{
+
+    opacity:1;
+
+    transform:
+    translateX(-50%)
+    translateY(0);
+
+}
+
+/* ===========================================
+   Bildbeschreibung
+=========================================== */
+
+#exerciseImage:not(:empty){
+
+    margin-bottom:25px;
+
+}
+
+.exercise-image{
+
+    width:100%;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 14px rgba(0,0,0,.12);
+
+}
