@@ -2,11 +2,12 @@
    js/data-en-directions.js
    Giving directions exercise (English), based on the
    miStudia City map. Route: arrive by boat, walk to the
-   Parking area to pick up your yellow car, then drive to
-   the Viewpoint Tower. Focus on direction-giving verbs
-   (get, find, drive, turn, follow, cross, park), landmark
-   nouns (corner, crossroad, bridge), direction words
-   (left, right, straight), and the preposition "between".
+   Parking area to pick up your yellow car, then drive via
+   Maple Street, Market Street, and Pine Street to reach
+   the Riverside Bridge and the Viewpoint Tower.
+   (Note: the path right next to the Innovation Center is a
+   footpath, not a road for cars, so the car route goes via
+   Market Street and Pine Street instead of River Road.)
 ========================================================== */
 
 const englishDirectionsExercise = {
@@ -20,7 +21,7 @@ const englishDirectionsExercise = {
 
     image: "images/mistudia-town-map.png",
 
-    imageAlt: "A map of miStudia City showing streets, a river with a boat and a bridge, a parking area, a football field, a park, and the Viewpoint Tower",
+    imageAlt: "A map of miStudia City showing streets, a river with a boat and a bridge, a parking area, a football field, a park, shops on Pine Street, and the Viewpoint Tower",
 
     ui: {
 
@@ -66,7 +67,7 @@ verb:"verb",
 answer:"Get",
 signal:"leaving the boat",
 tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
+formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
@@ -86,7 +87,7 @@ verb:"verb",
 answer:"Find",
 signal:"locating something",
 tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
+formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
@@ -96,27 +97,7 @@ verb:"verb",
 answer:"Drive",
 signal:"moving by car",
 tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
-},
-
-{
-before:"",
-after:" left onto River Road.",
-verb:"verb",
-answer:"Turn",
-signal:"changing direction",
-tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
-},
-
-{
-before:"Keep the river on your ",
-after:" as you drive north.",
-verb:"direction word",
-answer:"right",
-signal:"side of the road",
-tense:"Giving directions — direction word",
-formation:"left / right / straight"
+formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
@@ -131,12 +112,12 @@ formation:"between / next to / across from"
 
 {
 before:"",
-after:" straight past the Football Field.",
+after:" left onto Maple Street.",
 verb:"verb",
-answer:"Drive",
-signal:"moving by car",
+answer:"Turn",
+signal:"changing direction (there is no road for cars along the river by the Innovation Center)",
 tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
+formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
@@ -150,8 +131,28 @@ formation:"between / next to / across from"
 },
 
 {
+before:"",
+after:" right onto Market Street.",
+verb:"verb",
+answer:"Turn",
+signal:"changing direction",
+tense:"Giving directions — verb",
+formation:"go / turn / take / follow / cross / drive / park / find / get"
+},
+
+{
+before:"",
+after:" Market Street north until you reach Pine Street.",
+verb:"verb",
+answer:"Follow",
+signal:"staying on the same road",
+tense:"Giving directions — verb",
+formation:"go / turn / take / follow / cross / drive / park / find / get"
+},
+
+{
 before:"At the ",
-after:" near the Football Field, continue straight.",
+after:" with Pine Street, turn right.",
 verb:"noun",
 answer:"crossroad",
 signal:"where streets cross",
@@ -160,18 +161,28 @@ formation:"corner / crossroad / bridge"
 },
 
 {
+before:"Turn ",
+after:" onto Pine Street.",
+verb:"direction word",
+answer:"right",
+signal:"side of the road",
+tense:"Giving directions — direction word",
+formation:"left / right / straight"
+},
+
+{
 before:"",
-after:" Maple Street and keep driving north.",
+after:" along Pine Street, past the shops and MA House.",
 verb:"verb",
-answer:"Cross",
-signal:"going from one side to the other",
+answer:"Drive",
+signal:"moving by car",
 tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
+formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
 before:"Continue ",
-after:" until you reach the bridge.",
+after:" until the road curves towards the river.",
 verb:"direction word",
 answer:"straight",
 signal:"moving forward, no turn",
@@ -181,27 +192,27 @@ formation:"left / right / straight"
 
 {
 before:"",
-after:" River Road until you reach the bridge.",
-verb:"verb",
-answer:"Follow",
-signal:"staying on the same road",
-tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
-},
-
-{
-before:"",
 after:" the Riverside Bridge with the car.",
 verb:"verb",
 answer:"Cross",
 signal:"going from one side to the other",
 tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
+formation:"go / turn / take / follow / cross / drive / park / find / get"
+},
+
+{
+before:"The Viewpoint Tower is just past the ",
+after:".",
+verb:"noun",
+answer:"bridge",
+signal:"a structure over the river",
+tense:"Giving directions — landmark word",
+formation:"corner / crossroad / bridge"
 },
 
 {
 before:"Turn ",
-after:" after the bridge to reach the Viewpoint Tower.",
+after:" after the bridge to reach the tower.",
 verb:"direction word",
 answer:"right",
 signal:"side of the road",
@@ -216,7 +227,7 @@ verb:"verb",
 answer:"Park",
 signal:"leaving the car",
 tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
+formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
@@ -226,7 +237,7 @@ verb:"verb",
 answer:"Get",
 signal:"leaving the car",
 tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / walk / keep / drive / park / find / get"
+formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
