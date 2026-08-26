@@ -9,8 +9,9 @@ const germanExercise = {
 
     ui: {
         check: "✓ Auswerten",
-        solution: "📖 Lösungen anzeigen",
-        reset: "🔄 Neu starten"
+        solution: "📖 Lösungen",
+
+        reset: "🔄 Neu"
     },
 
     labels: {

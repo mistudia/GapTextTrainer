@@ -13,9 +13,9 @@ const englishExercise = {
 
     ui: {
 
-        check: "✓ Check Answers",
+        check: "✓ Check",
 
-        solution: "📖 Show Solutions",
+        solution: "📖 Solutions",
 
         reset: "🔄 Reset"
 

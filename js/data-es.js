@@ -15,7 +15,7 @@ const spanishExercise = {
 
         check: "✓ Comprobar",
 
-        solution: "📖 Mostrar soluciones",
+        solution: "📖 Soluciones",
 
         reset: "🔄 Reiniciar"
 

@@ -13,8 +13,17 @@ const App = {
 
 const Data = {
     de: germanExercise,
+    "de-wechsel": germanWechselpraepositionen,
     en: englishExercise,
+    "en-picture": englishPictureExercise,
+    "en-directions": englishDirectionsExercise,
     es: spanishExercise,
+    "es-picture": spanishPictureExercise,
+    "es-ii": spanishIndefinidoImperfecto,
+    "es-subj": spanishIndicativoSubjuntivo,
+    "es-porpara": spanishPorPara,
+    "es-serestar": spanishSerEstar,
+    fr: frenchExercise,
     zh: chineseExercise
 };
 
@@ -67,6 +76,29 @@ function loadLanguage(language) {
 
     updateInterface();
     buildExercise();
+    updateImage();
+
+}
+
+function updateImage() {
+
+    const imageContainer =
+        document.getElementById("exerciseImage");
+
+    if (App.data.image) {
+
+        imageContainer.innerHTML = `
+            <img
+                src="${App.data.image}"
+                alt="${App.data.imageAlt || ""}"
+                class="exercise-image">
+        `;
+
+    } else {
+
+        imageContainer.innerHTML = "";
+
+    }
 
 }
 
@@ -89,6 +121,31 @@ function updateInterface() {
 
 }
 
+/* ----------------------------------------------------------
+   Text mit optionalem Pinyin-Tooltip umschließen.
+   Wird nur benutzt, wenn ein Item ein *Pinyin-Feld
+   (z. B. beforePinyin) mitliefert - für alle anderen
+   Sprachen ändert sich nichts.
+---------------------------------------------------------- */
+
+function escapeAttr(text) {
+
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;");
+
+}
+
+function textWithPinyin(text, pinyin) {
+
+    if (!pinyin) {
+        return text;
+    }
+
+    return `<span class="pinyin-tooltip" data-pinyin="${escapeAttr(pinyin)}">${text}</span>`;
+
+}
+
 function buildExercise() {
 
     const container =
@@ -106,7 +163,7 @@ function buildExercise() {
 const hasSecondGap = item.answer2 !== undefined;
 
 let html = `
-${item.before}
+${textWithPinyin(item.before, item.beforePinyin)}
 <input
     class="gapInput"
     id="gap-${index}-0"
@@ -119,7 +176,7 @@ ${item.before}
 if (hasSecondGap) {
 
     html += `
-${item.mid}
+${textWithPinyin(item.mid, item.midPinyin)}
 <input
     class="gapInput"
     id="gap-${index}-1"
@@ -150,7 +207,7 @@ html += `
 
 </span>
 
-${item.after}
+${textWithPinyin(item.after, item.afterPinyin)}
 `;
 
 container.insertAdjacentHTML("beforeend", html);
@@ -436,11 +493,6 @@ function showSolutions() {
         );
 
         input.classList.add("correct");
-
-        document.getElementById(
-            "hint-" + itemIndex
-        ).textContent =
-            `${App.data.labels.formation}: ${item.formation}`;
 
     });
 
