@@ -1,0 +1,147 @@
+<svg viewBox="0 0 1024 576" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- sky -->
+  <rect x="0" y="0" width="1024" height="576" fill="#cdebfb"/>
+
+  <!-- city skyline silhouette -->
+  <g fill="#a9d3ee" opacity="0.7">
+    <rect x="30"  y="120" width="60" height="160"/>
+    <rect x="100" y="80"  width="50" height="200"/>
+    <rect x="160" y="140" width="70" height="140"/>
+    <rect x="720" y="100" width="55" height="180"/>
+    <rect x="790" y="150" width="65" height="130"/>
+    <rect x="870" y="90"  width="50" height="190"/>
+    <rect x="930" y="130" width="60" height="150"/>
+  </g>
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="180" cy="70" rx="45" ry="18"/>
+    <ellipse cx="215" cy="62" rx="35" ry="16"/>
+    <ellipse cx="770" cy="55" rx="50" ry="20"/>
+    <ellipse cx="810" cy="65" rx="32" ry="14"/>
+  </g>
+
+  <!-- grass -->
+  <rect x="0" y="280" width="1024" height="296" fill="#8fce6b"/>
+
+  <!-- path -->
+  <path d="M -20 576 C 200 470, 350 470, 500 500 C 650 530, 800 470, 1044 430 L 1044 576 Z" fill="#e8dcb8"/>
+
+  <!-- pond -->
+  <ellipse cx="700" cy="330" rx="140" ry="55" fill="#7ec8e3"/>
+  <ellipse cx="700" cy="330" rx="140" ry="55" fill="none" stroke="#5fb3d4" stroke-width="3"/>
+
+  <!-- duck on pond -->
+  <g transform="translate(755,335)">
+    <ellipse cx="0" cy="0" rx="20" ry="14" fill="#ffffff"/>
+    <circle cx="17" cy="-10" r="10" fill="#ffffff"/>
+    <path d="M25 -10 L37 -7 L25 -3 Z" fill="#f4a300"/>
+  </g>
+
+  <!-- trees -->
+  <g>
+    <rect x="345" y="150" width="16" height="90" fill="#8a5a34"/>
+    <circle cx="353" cy="120" r="70" fill="#4f9d4f"/>
+    <circle cx="310" cy="150" r="45" fill="#4f9d4f"/>
+    <circle cx="400" cy="150" r="45" fill="#4f9d4f"/>
+  </g>
+
+  <g>
+    <rect x="855" y="130" width="20" height="120" fill="#8a5a34"/>
+    <circle cx="865" cy="95" r="85" fill="#3e8e46"/>
+    <circle cx="815" cy="135" r="55" fill="#3e8e46"/>
+    <circle cx="915" cy="135" r="55" fill="#3e8e46"/>
+  </g>
+
+  <g>
+    <rect x="565" y="230" width="10" height="55" fill="#8a5a34"/>
+    <circle cx="570" cy="215" r="38" fill="#5cae5c"/>
+  </g>
+
+  <!-- lamppost -->
+  <g>
+    <rect x="63" y="180" width="8" height="180" fill="#3b3b3b"/>
+    <rect x="40" y="355" width="55" height="12" rx="4" fill="#3b3b3b"/>
+    <circle cx="67" cy="170" r="16" fill="#ffe9a8"/>
+    <circle cx="67" cy="170" r="16" fill="none" stroke="#3b3b3b" stroke-width="4"/>
+  </g>
+
+  <!-- bushes (foreground) -->
+  <g fill="#4f9d4f">
+    <ellipse cx="60"  cy="555" rx="80" ry="40"/>
+    <ellipse cx="140" cy="565" rx="70" ry="35"/>
+    <ellipse cx="900" cy="555" rx="90" ry="42"/>
+    <ellipse cx="980" cy="565" rx="60" ry="32"/>
+    <ellipse cx="470" cy="330" rx="35" ry="24"/>
+    <ellipse cx="510" cy="335" rx="30" ry="20"/>
+  </g>
+
+  <!-- bench -->
+  <g transform="translate(175,330)">
+    <rect x="0"   y="30" width="150" height="10" rx="3" fill="#7a4a24"/>
+    <rect x="0"   y="0"  width="150" height="10" rx="3" fill="#7a4a24"/>
+    <rect x="8"   y="10" width="10" height="20" fill="#7a4a24"/>
+    <rect x="132" y="10" width="10" height="20" fill="#7a4a24"/>
+    <rect x="4"  y="40" width="10" height="40" fill="#5c3a1c"/>
+    <rect x="136" y="40" width="10" height="40" fill="#5c3a1c"/>
+  </g>
+
+  <!-- trash can -->
+  <g transform="translate(370,340)">
+    <path d="M0 5 L38 5 L33 55 L5 55 Z" fill="#8a8f94"/>
+    <rect x="-3" y="0" width="44" height="8" rx="3" fill="#6f7378"/>
+  </g>
+
+  <!-- man sitting on bench, reading a book -->
+  <g transform="translate(220,255)">
+    <circle cx="20" cy="10" r="16" fill="#f2c19b"/>
+    <path d="M4 5 Q20 -12 36 5 L36 10 L4 10 Z" fill="#7a4a24"/>
+    <rect x="4" y="26" width="32" height="45" rx="10" fill="#4472c4"/>
+    <rect x="-2" y="60" width="20" height="16" rx="4" fill="#f2c19b"/>
+    <rect x="22" y="60" width="20" height="16" rx="4" fill="#f2c19b"/>
+    <rect x="2"  y="52" width="30" height="20" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+    <line x1="17" y1="52" x2="17" y2="72" stroke="#333333" stroke-width="1"/>
+    <rect x="0"  y="70" width="16" height="34" fill="#2b2b2b"/>
+    <rect x="24" y="70" width="16" height="34" fill="#2b2b2b"/>
+  </g>
+
+  <!-- woman walking dog -->
+  <g transform="translate(555,250)">
+    <circle cx="20" cy="10" r="16" fill="#f2c19b"/>
+    <path d="M4 2 Q20 -14 36 2 L38 26 Q20 34 2 26 Z" fill="#7a2e1e"/>
+    <rect x="2" y="26" width="36" height="48" rx="12" fill="#e0607e"/>
+    <rect x="0"  y="70" width="16" height="36" fill="#2b2b2b"/>
+    <rect x="24" y="70" width="16" height="36" fill="#2b2b2b"/>
+    <!-- arm + leash -->
+    <line x1="4" y1="45" x2="-25" y2="80" stroke="#f2c19b" stroke-width="8" stroke-linecap="round"/>
+    <line x1="-25" y1="80" x2="-75" y2="95" stroke="#7a4a24" stroke-width="2"/>
+  </g>
+
+  <!-- dog -->
+  <g transform="translate(430,315)">
+    <ellipse cx="20" cy="20" rx="30" ry="16" fill="#f4e3c1"/>
+    <circle cx="48" cy="10" r="13" fill="#f4e3c1"/>
+    <ellipse cx="58" cy="4" rx="5" ry="8" fill="#f4e3c1" transform="rotate(20 58 4)"/>
+    <rect x="4"  y="32" width="6" height="16" fill="#f4e3c1"/>
+    <rect x="34" y="32" width="6" height="16" fill="#f4e3c1"/>
+    <rect x="0"  y="20" width="10" height="10" fill="#3a6ea5"/>
+  </g>
+
+  <!-- child playing with a ball -->
+  <g transform="translate(500,190)">
+    <circle cx="15" cy="10" r="13" fill="#f2c19b"/>
+    <path d="M2 6 Q15 -8 28 6 L28 10 L2 10 Z" fill="#3b2b1e"/>
+    <rect x="2" y="22" width="26" height="34" rx="8" fill="#e8b23d"/>
+    <rect x="-2" y="52" width="14" height="26" fill="#355e8c"/>
+    <rect x="18" y="52" width="14" height="26" fill="#355e8c"/>
+    <circle cx="55" cy="60" r="14" fill="#e2574c"/>
+  </g>
+
+  <!-- flying birds -->
+  <g stroke="#3b3b3b" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M300 60 Q310 50 320 60 Q330 50 340 60"/>
+    <path d="M340 80 Q348 72 356 80 Q364 72 372 80"/>
+  </g>
+
+</svg>
