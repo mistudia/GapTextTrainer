@@ -1,13 +1,11 @@
 /* ==========================================================
    js/data-en-directions.js
    Giving directions exercise (English), based on the
-   miStudia City map. Route: arrive by boat, walk to the
-   Parking area to pick up your yellow car, then drive via
-   Maple Street, Market Street, and Pine Street to reach
-   the Riverside Bridge and the Viewpoint Tower.
-   (Note: the path right next to the Innovation Center is a
-   footpath, not a road for cars, so the car route goes via
-   Market Street and Pine Street instead of River Road.)
+   miStudia City map. Route: boat -> Parking Area (pick up
+   the yellow car) -> Elm Street -> roundabout -> past
+   Coburg Lane -> Main Avenue (past the Police Station and
+   the Gym) -> MA House -> Pine Street -> Riverside Bridge
+   -> Viewpoint Tower.
 ========================================================== */
 
 const englishDirectionsExercise = {
@@ -21,7 +19,7 @@ const englishDirectionsExercise = {
 
     image: "images/mistudia-town-map.png",
 
-    imageAlt: "A map of miStudia City showing streets, a river with a boat and a bridge, a parking area, a football field, a park, shops on Pine Street, and the Viewpoint Tower",
+    imageAlt: "A map of miStudia City showing streets, a river with a boat dock and a bridge, a parking area, a roundabout, shops on Pine Street, and the Viewpoint Tower",
 
     ui: {
 
@@ -62,17 +60,29 @@ const englishDirectionsExercise = {
 
 {
 before:"",
-after:" off the boat and walk to the Parking area.",
-verb:"verb",
+mid:" off the boat and walk ",
+after:" the Picnic Area.",
+verb:"direction word",
 answer:"Get",
-signal:"leaving the boat",
+answer2:"towards",
+signal:"leaving the boat / moving in the direction of something",
+tense:"Giving directions — verb + direction word",
+formation:"get ... towards"
+},
+
+{
+before:"",
+after:" to the Parking Area to find your yellow car.",
+verb:"verb",
+answer:"Walk",
+signal:"basic movement instruction",
 tense:"Giving directions — verb",
 formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
-before:"The Parking area is ",
-after:" the Football Field and the Picnic Area.",
+before:"The Parking Area is ",
+after:" the Picnic Area and the Hospital.",
 verb:"preposition",
 answer:"between",
 signal:"in the middle of two things",
@@ -82,17 +92,17 @@ formation:"between / next to / across from"
 
 {
 before:"",
-after:" your yellow car and get in.",
+after:" in the car and start the engine.",
 verb:"verb",
-answer:"Find",
-signal:"locating something",
+answer:"Get",
+signal:"entering the car",
 tense:"Giving directions — verb",
 formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
 before:"",
-after:" out of the Parking area and onto River Road.",
+after:" out of the Parking Area and onto Elm Street.",
 verb:"verb",
 answer:"Drive",
 signal:"moving by car",
@@ -101,68 +111,40 @@ formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
-before:"The Picnic Area is ",
-after:" River Road and the Parking area.",
-verb:"preposition",
-answer:"between",
-signal:"in the middle of two things",
-tense:"Giving directions — preposition",
-formation:"between / next to / across from"
-},
-
-{
-before:"",
-after:" left onto Maple Street.",
-verb:"verb",
-answer:"Turn",
-signal:"changing direction (there is no road for cars along the river by the Innovation Center)",
-tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / drive / park / find / get"
-},
-
-{
-before:"The Football Field is ",
-after:" the Park and River Road.",
-verb:"preposition",
-answer:"between",
-signal:"in the middle of two things",
-tense:"Giving directions — preposition",
-formation:"between / next to / across from"
-},
-
-{
-before:"",
-after:" right onto Market Street.",
-verb:"verb",
-answer:"Turn",
-signal:"changing direction",
-tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / drive / park / find / get"
-},
-
-{
-before:"",
-after:" Market Street north until you reach Pine Street.",
-verb:"verb",
-answer:"Follow",
-signal:"staying on the same road",
-tense:"Giving directions — verb",
-formation:"go / turn / take / follow / cross / drive / park / find / get"
-},
-
-{
 before:"At the ",
-after:" with Pine Street, turn right.",
-verb:"noun",
-answer:"crossroad",
-signal:"where streets cross",
-tense:"Giving directions — landmark word",
-formation:"corner / crossroad / bridge"
+mid:", go straight ahead by taking the ",
+after:" exit.",
+verb:"numeral",
+answer:"roundabout",
+answer2:"second",
+signal:"a circular junction / which exit to take",
+tense:"Giving directions — landmark word + numeral",
+formation:"roundabout ... first / second / third exit"
 },
 
 {
-before:"Turn ",
-after:" onto Pine Street.",
+before:"Go straight, past Coburg Lane, and turn right at the ",
+after:" street on the right.",
+verb:"numeral",
+answer:"second",
+signal:"which street to take",
+tense:"Giving directions — numeral",
+formation:"first / second / third street"
+},
+
+{
+before:"",
+after:" straight on Main Avenue.",
+verb:"verb",
+answer:"Continue",
+signal:"moving forward, no turn",
+tense:"Giving directions — verb",
+formation:"go / turn / take / follow / cross / drive / park / find / get"
+},
+
+{
+before:"On your ",
+after:" you see the Police Station.",
 verb:"direction word",
 answer:"right",
 signal:"side of the road",
@@ -171,23 +153,65 @@ formation:"left / right / straight"
 },
 
 {
-before:"",
-after:" along Pine Street, past the shops and MA House.",
+before:"After ",
+after:" Maple Street, there is the Gym.",
 verb:"verb",
-answer:"Drive",
-signal:"moving by car",
+answer:"crossing",
+signal:"going from one side to the other (after + verb-ing)",
+tense:"Giving directions — verb",
+formation:"after crossing / after passing"
+},
+
+{
+before:"The Gym is ",
+after:" the School and the Restaurant.",
+verb:"preposition",
+answer:"between",
+signal:"in the middle of two things",
+tense:"Giving directions — preposition",
+formation:"between / next to / across from"
+},
+
+{
+before:"",
+after:" Main Avenue until the corner with Pine Street.",
+verb:"verb",
+answer:"Follow",
+signal:"staying on the same road",
 tense:"Giving directions — verb",
 formation:"go / turn / take / follow / cross / drive / park / find / get"
 },
 
 {
-before:"Continue ",
-after:" until the road curves towards the river.",
+before:"Here, make a ",
+after:" onto Pine Street.",
+verb:"noun",
+answer:"turn",
+signal:"changing streets",
+tense:"Giving directions — landmark word",
+formation:"corner / crossroad / bridge / turn"
+},
+
+{
+before:"Drive ",
+after:" Pine Street, past the shops and MA House.",
 verb:"direction word",
-answer:"straight",
-signal:"moving forward, no turn",
+answer:"along",
+signal:"moving by car",
 tense:"Giving directions — direction word",
-formation:"left / right / straight"
+formation:"left / right / straight / along"
+},
+
+{
+before:"Continue ",
+mid:" until the road ",
+after:" the river.",
+verb:"verb",
+answer:"straight",
+answer2:"meets",
+signal:"moving forward, no turn / where the road ends at the river",
+tense:"Giving directions — direction word + verb",
+formation:"straight ... meets"
 },
 
 {
@@ -212,12 +236,14 @@ formation:"corner / crossroad / bridge"
 
 {
 before:"Turn ",
-after:" after the bridge to reach the tower.",
-verb:"direction word",
+mid:" after the bridge to ",
+after:" the tower.",
+verb:"verb",
 answer:"right",
-signal:"side of the road",
-tense:"Giving directions — direction word",
-formation:"left / right / straight"
+answer2:"reach",
+signal:"side of the road / arriving at a destination",
+tense:"Giving directions — direction word + verb",
+formation:"right ... reach"
 },
 
 {
@@ -232,22 +258,12 @@ formation:"go / turn / take / follow / cross / drive / park / find / get"
 
 {
 before:"",
-after:" out of the car and walk up to the tower.",
+after:" out of the car, walk up the tower and enjoy the view.",
 verb:"verb",
 answer:"Get",
 signal:"leaving the car",
 tense:"Giving directions — verb",
 formation:"go / turn / take / follow / cross / drive / park / find / get"
-},
-
-{
-before:"The Viewpoint Tower stands on the ",
-after:" where the road meets the river.",
-verb:"noun",
-answer:"corner",
-signal:"where two paths meet",
-tense:"Giving directions — landmark word",
-formation:"corner / crossroad / bridge"
 }
 
 ]
