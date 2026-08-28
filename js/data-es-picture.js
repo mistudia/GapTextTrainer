@@ -73,7 +73,7 @@ formation:"estar + adjetivo"
 
 {
 before:"",
-after:" dos pájaros muy alto en el cielo.",
+after:" un pájaro muy alto en el cielo.",
 verb:"hay",
 answer:"Hay",
 signal:"existencia (sustantivo indefinido)",
@@ -82,11 +82,11 @@ formation:"hay + sustantivo"
 },
 
 {
-before:"Los pájaros ",
+before:"El pájaro ",
 after:" sobre el parque.",
 verb:"volar",
-answer:"están volando",
-signal:"acción en progreso (sujeto plural)",
+answer:"está volando",
+signal:"acción en progreso",
 tense:"Estar + gerundio (progresivo)",
 formation:"está/están + gerundio"
 },
@@ -119,6 +119,16 @@ answer:"Hay",
 signal:"existencia (sustantivo indefinido)",
 tense:"Hay (existencia)",
 formation:"hay + sustantivo"
+},
+
+{
+before:"El lago ",
+after:" grande y azul.",
+verb:"adjetivo",
+answer:"es",
+signal:"característica permanente",
+tense:"Ser + adjetivo (característica)",
+formation:"ser + adjetivo"
 },
 
 {
@@ -249,6 +259,16 @@ answer:"al lado de",
 signal:"posición: junto a",
 tense:"Preposición de lugar",
 formation:"al lado de"
+},
+
+{
+before:"El banco ",
+after:" de madera.",
+verb:"material",
+answer:"es",
+signal:"material",
+tense:"Ser + sustantivo (material)",
+formation:"ser de + material"
 },
 
 {
