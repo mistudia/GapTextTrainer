@@ -142,13 +142,13 @@ formation:"está/están + gerundio"
 },
 
 {
-before:"El parque infantil está ",
-after:" del lago.",
-verb:"preposición",
-answer:"cerca",
-signal:"posición: próximo a",
-tense:"Preposición de lugar",
-formation:"cerca de"
+before:"El parque infantil ",
+after:" cerca del lago.",
+verb:"verbo",
+answer:"está",
+signal:"ubicación",
+tense:"Estar (ubicación)",
+formation:"está/están"
 },
 
 {
@@ -202,13 +202,13 @@ formation:"hay + sustantivo"
 },
 
 {
-before:"El cartel está ",
-after:" un árbol grande.",
-verb:"preposición",
-answer:"debajo de",
-signal:"posición: abajo",
-tense:"Preposición de lugar",
-formation:"debajo de"
+before:"El cartel ",
+after:" debajo de un árbol grande.",
+verb:"verbo",
+answer:"está",
+signal:"ubicación",
+tense:"Estar (ubicación)",
+formation:"está/están"
 },
 
 {
@@ -292,13 +292,13 @@ formation:"está/están + gerundio"
 },
 
 {
-before:"Su mochila está ",
-after:" del banco.",
-verb:"preposición",
-answer:"al lado",
-signal:"posición: junto a",
-tense:"Preposición de lugar",
-formation:"al lado de"
+before:"Su mochila ",
+after:" al lado del banco.",
+verb:"verbo",
+answer:"está",
+signal:"ubicación",
+tense:"Estar (ubicación)",
+formation:"está/están"
 },
 
 {
