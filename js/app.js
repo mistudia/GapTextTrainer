@@ -18,6 +18,7 @@ const Data = {
     "en-picture": englishPictureExercise,
     "en-directions": englishDirectionsExercise,
     es: spanishExercise,
+    "es-presente": spanishPresenteRegular,
     "es-picture": spanishPictureExercise,
     "es-ii": spanishIndefinidoImperfecto,
     "es-subj": spanishIndicativoSubjuntivo,
