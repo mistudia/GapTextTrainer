@@ -191,6 +191,56 @@ input{
 }
 
 /* =====================================================
+   Menüsprache (Oberfläche: Buttons, Hinweise, Meldungen)
+===================================================== */
+
+.ui-language-selector{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-bottom:15px;
+
+}
+
+.ui-lang-btn{
+
+    padding:6px 12px;
+
+    border:2px solid transparent;
+
+    border-radius:8px;
+
+    background:white;
+
+    font-size:1.3rem;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+
+}
+
+.ui-lang-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.ui-lang-btn.active{
+
+    border-color:var(--primary);
+
+}
+
+/* =====================================================
    Titel
 ===================================================== */
 
@@ -775,5 +825,54 @@ input:focus{
     border-radius:10px;
 
     box-shadow:0 4px 14px rgba(0,0,0,.12);
+
+}
+
+/* ===========================================
+   Einstellungen (Feedback-Schalter)
+=========================================== */
+
+.settings-bar{
+
+    max-width:1000px;
+
+    margin:0 auto 20px;
+
+    text-align:center;
+
+}
+
+.settings-toggle{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:var(--surface);
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    box-shadow:var(--shadow);
+
+    font-size:.92rem;
+
+    color:var(--text-light);
+
+    cursor:pointer;
+
+}
+
+.settings-toggle input{
+
+    width:18px;
+    height:18px;
+
+    accent-color:var(--primary);
+
+    cursor:pointer;
 
 }
