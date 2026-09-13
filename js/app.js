@@ -14,6 +14,7 @@ const App = {
 const Data = {
     de: germanExercise,
     "de-wechsel": germanWechselpraepositionen,
+    "de-sss": germanSSS,
     en: englishExercise,
     "en-picture": englishPictureExercise,
     "en-directions": englishDirectionsExercise,
