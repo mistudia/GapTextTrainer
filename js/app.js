@@ -6,10 +6,192 @@
 
 const App = {
     language: "de",
+    uiLanguage: "de",
     data: null,
     hintState: [],
-    inputs: []
+    inputs: [],
+    immediateFeedback: true
 };
+
+// Menüsprache: übersetzt Button-Beschriftungen, Hinweis-Label
+// und Rückmeldungen JEDER Übung - unabhängig von der Sprache
+// des gerade gewählten Übungsinhalts.
+const UI_TEXT = {
+
+    de: {
+        check: "✓ Auswerten",
+        solution: "📖 Lösungen",
+        reset: "🔄 Neu",
+        signal: "💡 Signal",
+        tense: "💡 Regel",
+        formation: "💡 Beispiel",
+        perfect: "🏆 Perfekt! Alle Antworten sind richtig.",
+        good: "👏 Sehr gut!",
+        ok: "👍 Gut gemacht. Noch ein wenig üben.",
+        tryAgain: "📚 Weiter üben!",
+        solutionsShown: "Die Lösungen wurden angezeigt.",
+        feedbackToggle: "Sofortige Rückmeldung beim Ausfüllen (statt nur bei \"Auswerten\")"
+    },
+
+    en: {
+        check: "✓ Check",
+        solution: "📖 Solutions",
+        reset: "🔄 Reset",
+        signal: "💡 Hint",
+        tense: "💡 Rule",
+        formation: "💡 Pattern",
+        perfect: "🏆 Perfect! Excellent work!",
+        good: "👏 Very good!",
+        ok: "👍 Good job. Keep practising.",
+        tryAgain: "📚 Keep practising!",
+        solutionsShown: "The solutions have been shown.",
+        feedbackToggle: "Immediate feedback while typing (instead of only after \"Check\")"
+    },
+
+    es: {
+        check: "✓ Comprobar",
+        solution: "📖 Soluciones",
+        reset: "🔄 Reiniciar",
+        signal: "💡 Indicador",
+        tense: "💡 Regla",
+        formation: "💡 Ejemplo",
+        perfect: "🏆 ¡Perfecto! ¡Excelente trabajo!",
+        good: "👏 ¡Muy bien!",
+        ok: "👍 Buen trabajo. Sigue practicando.",
+        tryAgain: "📚 Sigue practicando.",
+        solutionsShown: "Se han mostrado las soluciones.",
+        feedbackToggle: "Retroalimentación inmediata al escribir (en vez de solo al pulsar \"Comprobar\")"
+    },
+
+    zh: {
+        check: "✓ 检查",
+        solution: "📖 答案",
+        reset: "🔄 重新",
+        signal: "💡 提示",
+        tense: "💡 规则",
+        formation: "💡 例子",
+        perfect: "🏆 太棒了！全部正确！",
+        good: "👏 很好！",
+        ok: "👍 做得不错，继续练习。",
+        tryAgain: "📚 继续加油！",
+        solutionsShown: "答案已显示。",
+        feedbackToggle: "输入时立即反馈（而不是只有点击\"检查\"后才反馈）"
+    }
+
+};
+
+// Titel und Beschreibung jeder Übung in allen 4 Menüsprachen.
+// Der eigentliche Übungsinhalt (Sätze) bleibt unverändert in
+// seiner Zielsprache - hier geht es nur um die Kopfzeile.
+const EXERCISE_META = {
+
+    de: {
+        de: { title: "Alle Zeitformen", description: "Setze die Verben in Klammern in die richtige Form." },
+        en: { title: "All Tenses (German)", description: "Put the verbs in brackets into the correct form." },
+        es: { title: "Todos los tiempos verbales (alemán)", description: "Pon los verbos entre paréntesis en la forma correcta." },
+        zh: { title: "所有时态（德语）", description: "把括号里的动词填成正确的形式。" }
+    },
+
+    "de-wechsel": {
+        de: { title: "Wechselpräpositionen", description: "Setze den richtigen Artikel ein: Akkusativ (wohin?) oder Dativ (wo?)." },
+        en: { title: "Two-Way Prepositions", description: "Fill in the correct article: accusative (where to?) or dative (where?)." },
+        es: { title: "Preposiciones de doble régimen", description: "Completa con el artículo correcto: acusativo (¿adónde?) o dativo (¿dónde?)." },
+        zh: { title: "德语双格介词", description: "填入正确的冠词：第四格（去哪儿？）还是第三格（在哪儿？）。" }
+    },
+
+    "de-sss": {
+        de: { title: "s, ss oder ß?", description: "Setze die richtige Schreibweise ein: s, ss oder ß." },
+        en: { title: "s, ss, or ß?", description: "Fill in the correct spelling: s, ss, or ß." },
+        es: { title: "¿s, ss o ß?", description: "Completa con la grafía correcta: s, ss o ß." },
+        zh: { title: "s、ss 还是 ß？", description: "填入正确的拼写：s、ss 还是 ß。" }
+    },
+
+    en: {
+        de: { title: "Alle Zeitformen (Englisch)", description: "Vervollständige den Text mit der richtigen Verbform." },
+        en: { title: "All Tenses", description: "Complete the text with the correct verb forms." },
+        es: { title: "Todos los tiempos verbales (inglés)", description: "Completa el texto con la forma correcta del verbo." },
+        zh: { title: "所有时态（英语）", description: "用正确的动词形式补全课文。" }
+    },
+
+    "en-picture": {
+        de: { title: "Bild beschreiben", description: "Schau dir das Bild an und vervollständige die Sätze dazu." },
+        en: { title: "Describe the Picture", description: "Look at the picture and complete the sentences about it." },
+        es: { title: "Describe la imagen (inglés)", description: "Mira la imagen y completa las frases sobre ella." },
+        zh: { title: "看图说话", description: "看图片，补全关于它的句子。" }
+    },
+
+    "en-directions": {
+        de: { title: "Wegbeschreibung", description: "Schau dir die Karte von miStudia City an. Du kommst mit dem Boot an, holst dein gelbes Auto ab und fährst zum Viewpoint Tower. Vervollständige die Wegbeschreibung." },
+        en: { title: "Giving Directions", description: "Look at the map of miStudia City. You arrive by boat, pick up your yellow car, and drive to the Viewpoint Tower. Complete the directions." },
+        es: { title: "Cómo dar indicaciones", description: "Mira el mapa de miStudia City. Llegas en barco, recoges tu coche amarillo y conduces hasta el Viewpoint Tower. Completa las indicaciones." },
+        zh: { title: "问路指路", description: "看看miStudia市的地图。你乘船抵达，取走你的黄色汽车，开车前往观景塔。补全路线说明。" }
+    },
+
+    es: {
+        de: { title: "Alle Zeitformen (Spanisch)", description: "Vervollständige den Text mit der richtigen Verbform." },
+        en: { title: "All Tenses (Spanish)", description: "Complete the text with the correct verb form." },
+        es: { title: "Todos los tiempos verbales", description: "Completa el texto con la forma correcta del verbo." },
+        zh: { title: "所有时态（西班牙语）", description: "用正确的动词形式补全课文。" }
+    },
+
+    "es-presente": {
+        de: { title: "Präsens – Regelmäßige Verben", description: "Vervollständige den Text mit der richtigen Präsensform (Verben auf -ar, -er, -ir)." },
+        en: { title: "Present – Regular Verbs", description: "Complete the text with the correct present-tense form (verbs ending in -ar, -er, -ir)." },
+        es: { title: "Presente – Verbos Regulares", description: "Completa el texto con la forma correcta del verbo en presente (verbos en -ar, -er, -ir)." },
+        zh: { title: "现在时 – 规则动词", description: "用正确的现在时动词形式补全课文（-ar、-er、-ir 动词）。" }
+    },
+
+    "es-picture": {
+        de: { title: "Bild beschreiben (Spanisch)", description: "Schau dir das Bild an und vervollständige die Sätze dazu." },
+        en: { title: "Describe the Picture (Spanish)", description: "Look at the picture and complete the sentences about it." },
+        es: { title: "Describe la imagen", description: "Mira la imagen y completa las frases sobre ella." },
+        zh: { title: "看图说话（西班牙语）", description: "看图片，补全关于它的句子。" }
+    },
+
+    "es-ii": {
+        de: { title: "Indefinido vs. Imperfekt", description: "Vervollständige den Text mit der richtigen Form: Indefinido oder Imperfecto." },
+        en: { title: "Preterite vs. Imperfect", description: "Complete the text with the correct form: preterite or imperfect." },
+        es: { title: "Indefinido vs. Imperfecto", description: "Completa el texto con la forma correcta: pretérito indefinido o pretérito imperfecto." },
+        zh: { title: "简单过去时 vs. 未完成过去时", description: "用正确的形式补全课文：简单过去时还是未完成过去时。" }
+    },
+
+    "es-subj": {
+        de: { title: "Indikativ vs. Subjunktiv", description: "Vervollständige den Text mit der richtigen Form: Indikativ oder Subjunktiv." },
+        en: { title: "Indicative vs. Subjunctive", description: "Complete the text with the correct form: indicative or subjunctive." },
+        es: { title: "Indicativo vs. Subjuntivo", description: "Completa el texto con la forma correcta: indicativo o subjuntivo." },
+        zh: { title: "陈述式 vs. 虚拟式", description: "用正确的形式补全课文：陈述式还是虚拟式。" }
+    },
+
+    "es-porpara": {
+        de: { title: "Por vs. Para", description: "Setze die richtige Präposition ein: por oder para." },
+        en: { title: "Por vs. Para", description: "Fill in the correct preposition: por or para." },
+        es: { title: "Por vs. Para", description: "Completa el texto con la preposición correcta: por o para." },
+        zh: { title: "Por 还是 Para？", description: "填入正确的介词：por 还是 para。" }
+    },
+
+    "es-serestar": {
+        de: { title: "Ser vs. Estar", description: "Vervollständige den Text mit der richtigen Form von ser oder estar." },
+        en: { title: "Ser vs. Estar", description: "Complete the text with the correct form of ser or estar." },
+        es: { title: "Ser vs. Estar", description: "Completa el texto con la forma correcta de ser o estar." },
+        zh: { title: "Ser 还是 Estar？", description: "用 ser 或 estar 的正确形式补全课文。" }
+    },
+
+    fr: {
+        de: { title: "Alle Zeitformen (Französisch)", description: "Vervollständige den Text mit der richtigen Verbform." },
+        en: { title: "All Tenses (French)", description: "Complete the text with the correct verb form." },
+        es: { title: "Todos los tiempos verbales (francés)", description: "Completa el texto con la forma correcta del verbo." },
+        zh: { title: "所有时态（法语）", description: "用正确的动词形式补全课文。" }
+    },
+
+    zh: {
+        de: { title: "Chinesische Aspektpartikel", description: "Setze je nach Zeitsignal im Satz das richtige Aspektpartikel ein (了 / 过 / 着 usw.)." },
+        en: { title: "Chinese Aspect Particles", description: "Based on the time signal in the sentence, fill in the correct aspect particle (了 / 过 / 着, etc.)." },
+        es: { title: "Partículas de aspecto en chino", description: "Según la señal temporal de la frase, completa con la partícula de aspecto correcta (了 / 过 / 着, etc.)." },
+        zh: { title: "汉语时体助词练习", description: "根据句子中的时间信号词，填入正确的时体助词（了 / 过 / 着 等）。" }
+    }
+
+};
+
 
 const Data = {
     de: germanExercise,
@@ -57,7 +239,45 @@ function init() {
         .getElementById("resetButton")
         .addEventListener("click", resetExercise);
 
+    document
+        .getElementById("immediateFeedbackToggle")
+        .addEventListener("change", event => {
+
+            App.immediateFeedback = event.target.checked;
+
+        });
+
+    document
+        .querySelectorAll(".ui-lang-btn")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                loadUiLanguage(button.dataset.uilang);
+
+            });
+
+        });
+
     loadLanguage("de");
+
+}
+
+function loadUiLanguage(uiLanguage) {
+
+    App.uiLanguage = uiLanguage;
+
+    document
+        .querySelectorAll(".ui-lang-btn")
+        .forEach(button =>
+            button.classList.remove("active")
+        );
+
+    document
+        .querySelector(`[data-uilang="${uiLanguage}"]`)
+        .classList.add("active");
+
+    updateInterface();
 
 }
 
@@ -106,20 +326,28 @@ function updateImage() {
 
 function updateInterface() {
 
+    const t = UI_TEXT[App.uiLanguage];
+
+    const meta =
+        EXERCISE_META[App.language][App.uiLanguage];
+
     document.getElementById("exerciseTitle").textContent =
-        App.data.title;
+        meta.title;
 
     document.getElementById("exerciseDescription").textContent =
-        App.data.description;
+        meta.description;
 
     document.getElementById("checkButton").textContent =
-        App.data.ui.check;
+        t.check;
 
     document.getElementById("solutionButton").textContent =
-        App.data.ui.solution;
+        t.solution;
 
     document.getElementById("resetButton").textContent =
-        App.data.ui.reset;
+        t.reset;
+
+    document.getElementById("feedbackToggleLabel").textContent =
+        t.feedbackToggle;
 
 }
 
@@ -245,8 +473,8 @@ function initInputs() {
 
         input.addEventListener("blur", () => {
 
-            if (input.value.trim() !== "") {
-                checkSingleInput(input);
+            if (App.immediateFeedback && input.value.trim() !== "") {
+                checkSingleInput(input, true);
             }
 
         });
@@ -269,6 +497,15 @@ function initInputs() {
                 "flash-wrong"
             );
 
+            if (input.dataset.autoClear === "true") {
+
+                input.classList.remove(
+                    "correct",
+                    "wrong"
+                );
+
+            }
+
         });
 
     });
@@ -287,8 +524,8 @@ function handleKeyDown(event) {
 
         event.preventDefault();
 
-        if (input.value.trim() !== "") {
-            checkSingleInput(input);
+        if (App.immediateFeedback && input.value.trim() !== "") {
+            checkSingleInput(input, true);
         }
 
         focusNext(index);
@@ -299,8 +536,8 @@ function handleKeyDown(event) {
 
     if (event.key === "Tab") {
 
-        if (input.value.trim() !== "") {
-            checkSingleInput(input);
+        if (App.immediateFeedback && input.value.trim() !== "") {
+            checkSingleInput(input, true);
         }
 
     }
@@ -338,7 +575,7 @@ function initHints() {
 function showHint(index) {
 
     const item = App.data.story[index];
-    const labels = App.data.labels;
+    const labels = UI_TEXT[App.uiLanguage];
 
 const hints = [
 
@@ -361,7 +598,7 @@ const hints = [
 
 }
 
-function checkSingleInput(input) {
+function checkSingleInput(input, autoClear) {
 
     const itemIndex =
         Number(input.dataset.item);
@@ -402,6 +639,11 @@ function checkSingleInput(input) {
 
     }
 
+    // Merkt sich, ob die farbliche Markierung nach dem
+    // kurzen Aufblinken automatisch wieder verschwinden soll
+    // (Zwischenprüfung) oder bestehen bleibt (Auswerten-Button).
+    input.dataset.autoClear = autoClear ? "true" : "false";
+
     return correct;
 
 }
@@ -424,7 +666,7 @@ function checkAnswers() {
 
     App.inputs.forEach(input => {
 
-        if (checkSingleInput(input)) {
+        if (checkSingleInput(input, false)) {
             correct++;
         }
 
@@ -442,26 +684,28 @@ function showResult(correct) {
         (correct / total) * 100
     );
 
+    const t = UI_TEXT[App.uiLanguage];
+
     let message = "";
 
 if (percent === 100) {
 
-    message = App.data.messages.perfect;
+    message = t.perfect;
 
     jubelChoreo();
 
 }
 else if (percent >= 80) {
 
-        message = App.data.messages.good;
+        message = t.good;
 
     } else if (percent >= 60) {
 
-        message = App.data.messages.ok;
+        message = t.ok;
 
     } else {
 
-        message = App.data.messages.tryAgain;
+        message = t.tryAgain;
 
     }
 
@@ -499,7 +743,7 @@ function showSolutions() {
     });
 
     document.getElementById("result").innerHTML =
-        App.data.messages.solutionsShown;
+        UI_TEXT[App.uiLanguage].solutionsShown;
 
 }
 

@@ -49,7 +49,7 @@ const spanishExercise = {
     story: [
 
 {
-before:"Cada mañana Anna ",
+before:"Cada mañana Ana ",
 after:" un café antes de ir al trabajo. ",
 verb:"beber",
 answer:"bebe",
@@ -89,7 +89,7 @@ formation:"hablaba"
 },
 
 {
-before:"Anna ya ",
+before:"Ana ya ",
 after:" en varios proyectos internacionales. ",
 verb:"trabajar",
 answer:"ha trabajado",
@@ -109,7 +109,7 @@ formation:"había hablado"
 },
 
 {
-before:"La próxima semana Anna ",
+before:"La próxima semana Ana ",
 after:" a Madrid. ",
 verb:"viajar",
 answer:"va a viajar",
@@ -159,7 +159,7 @@ formation:"habría hablado"
 },
 
 {
-before:"Es importante que Anna ",
+before:"Es importante que Ana ",
 after:" bien español. ",
 verb:"hablar",
 answer:"hable",

@@ -45,7 +45,7 @@ verb:"der Tisch (Akk./Dat.)",
 answer:"den",
 signal:"kriechen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"unter den/die/das ..."
+formation:"unter den Mann/die Frau/das Kind"
 },
 
 {
@@ -55,7 +55,7 @@ verb:"das Sofa (Akk./Dat.)",
 answer:"dem",
 signal:"liegen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"auf dem/der/dem ..."
+formation:"auf dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -65,7 +65,7 @@ verb:"der Esstisch (Akk./Dat.)",
 answer:"dem",
 signal:"hängen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"über dem/der/dem ..."
+formation:"über dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -75,7 +75,7 @@ verb:"das Sofa (Akk./Dat.)",
 answer:"das",
 signal:"legen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"auf den/die/das ..."
+formation:"auf den Mann/die Frau/das Kind"
 },
 
 {
@@ -85,7 +85,7 @@ verb:"der Haken (Akk./Dat.)",
 answer:"den",
 signal:"hängen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"an den/die/das ..."
+formation:"an den Mann/die Frau/das Kind"
 },
 
 {
@@ -95,7 +95,7 @@ verb:"die Bibliothek (Akk./Dat.)",
 answer:"der",
 signal:"arbeiten (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"in dem/der/dem ..."
+formation:"in dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -105,7 +105,7 @@ verb:"der Spiegel (Akk./Dat.)",
 answer:"den",
 signal:"sich stellen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"vor den/die/das ..."
+formation:"vor den Mann/die Frau/das Kind"
 },
 
 {
@@ -127,7 +127,7 @@ verb:"der Tisch (Akk./Dat.)",
 answer:"dem",
 signal:"sitzen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"an dem/der/dem ..."
+formation:"an dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -137,7 +137,7 @@ verb:"das Regal (Akk./Dat.)",
 answer:"dem",
 signal:"stehen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"vor dem/der/dem ..."
+formation:"vor dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -159,7 +159,7 @@ verb:"das Haus (Akk./Dat.)",
 answer:"das",
 signal:"fahren (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"hinter den/die/das ..."
+formation:"hinter den Mann/die Frau/das Kind"
 },
 
 {
@@ -169,7 +169,7 @@ verb:"der Tisch (Akk./Dat.)",
 answer:"dem",
 signal:"stehen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"zwischen dem/der/dem ..."
+formation:"zwischen dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -179,7 +179,7 @@ verb:"die Bibliothek (Akk./Dat.)",
 answer:"die",
 signal:"gehen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"in den/die/das ..."
+formation:"in den Mann/die Frau/das Kind"
 },
 
 {
@@ -189,7 +189,7 @@ verb:"das Kino (Akk./Dat.)",
 answer:"das",
 signal:"gehen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"in den/die/das ..."
+formation:"in den Mann/die Frau/das Kind"
 },
 
 {
@@ -199,7 +199,7 @@ verb:"der Fluss (Akk./Dat.)",
 answer:"dem",
 signal:"sitzen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"über dem/der/dem ..."
+formation:"über dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -209,7 +209,7 @@ verb:"der Fluss (Akk./Dat.)",
 answer:"den",
 signal:"fliegen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"über den/die/das ..."
+formation:"über den Mann/die Frau/das Kind"
 },
 
 {
@@ -219,7 +219,7 @@ verb:"die Tür (Akk./Dat.)",
 answer:"die",
 signal:"stellen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"neben den/die/das ..."
+formation:"neben den Mann/die Frau/das Kind"
 },
 
 {
@@ -229,7 +229,7 @@ verb:"der Tisch (Akk./Dat.)",
 answer:"dem",
 signal:"sitzen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"unter dem/der/dem ..."
+formation:"unter dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -239,17 +239,7 @@ verb:"der Tisch (Akk./Dat.)",
 answer:"den",
 signal:"legen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"auf den/die/das ..."
-},
-
-{
-before:"Er hängt das Bild an ",
-after:" Wand.",
-verb:"die Wand (Akk./Dat.)",
-answer:"die",
-signal:"hängen (Wohin?)",
-tense:"Akkusativ – Bewegung/Richtung",
-formation:"an den/die/das ..."
+formation:"auf den Mann/die Frau/das Kind"
 },
 
 {
@@ -259,7 +249,7 @@ verb:"der Haken (Akk./Dat.)",
 answer:"dem",
 signal:"hängen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"an dem/der/dem ..."
+formation:"an dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -269,7 +259,7 @@ verb:"der Tisch (Akk./Dat.)",
 answer:"den",
 signal:"sich setzen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"an den/die/das ..."
+formation:"an den Mann/die Frau/das Kind"
 },
 
 {
@@ -279,7 +269,7 @@ verb:"der Esstisch (Akk./Dat.)",
 answer:"den",
 signal:"hängen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"über den/die/das ..."
+formation:"über den Mann/die Frau/das Kind"
 },
 
 {
@@ -289,7 +279,7 @@ verb:"die Fensterbank (Akk./Dat.)",
 answer:"der",
 signal:"stehen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"auf dem/der/dem ..."
+formation:"auf dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -299,7 +289,7 @@ verb:"die Tastatur (Akk./Dat.)",
 answer:"der",
 signal:"liegen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"zwischen dem/der/dem ..."
+formation:"zwischen dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -309,7 +299,7 @@ verb:"das Regal (Akk./Dat.)",
 answer:"das",
 signal:"stellen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"vor den/die/das ..."
+formation:"vor den Mann/die Frau/das Kind"
 },
 
 {
@@ -331,7 +321,7 @@ verb:"das Haus (Akk./Dat.)",
 answer:"dem",
 signal:"stehen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"hinter dem/der/dem ..."
+formation:"hinter dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -341,7 +331,7 @@ verb:"der Spiegel (Akk./Dat.)",
 answer:"dem",
 signal:"stehen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"vor dem/der/dem ..."
+formation:"vor dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -351,7 +341,7 @@ verb:"das Fenster (Akk./Dat.)",
 answer:"das",
 signal:"sich setzen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"neben den/die/das ..."
+formation:"neben den Mann/die Frau/das Kind"
 },
 
 {
@@ -385,7 +375,7 @@ verb:"die Fensterbank (Akk./Dat.)",
 answer:"die",
 signal:"stellen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"auf den/die/das ..."
+formation:"auf den Mann/die Frau/das Kind"
 },
 
 {
@@ -395,7 +385,7 @@ verb:"das Fenster (Akk./Dat.)",
 answer:"dem",
 signal:"sitzen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"neben dem/der/dem ..."
+formation:"neben dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -405,7 +395,7 @@ verb:"die Tür (Akk./Dat.)",
 answer:"der",
 signal:"stehen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"neben dem/der/dem ..."
+formation:"neben dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -415,7 +405,7 @@ verb:"das Bett (Akk./Dat.)",
 answer:"das",
 signal:"springen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"unter den/die/das ..."
+formation:"unter den Mann/die Frau/das Kind"
 },
 
 {
@@ -425,7 +415,7 @@ verb:"der Bus (Akk./Dat.)",
 answer:"dem",
 signal:"sich befinden (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"hinter dem/der/dem ..."
+formation:"hinter dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -435,7 +425,7 @@ verb:"die Tastatur (Akk./Dat.)",
 answer:"die",
 signal:"legen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"zwischen den/die/das ..."
+formation:"zwischen den Mann/die Frau/das Kind"
 },
 
 {
@@ -445,7 +435,7 @@ verb:"der Bus (Akk./Dat.)",
 answer:"den",
 signal:"laufen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"hinter den/die/das ..."
+formation:"hinter den Mann/die Frau/das Kind"
 },
 
 {
@@ -467,7 +457,7 @@ verb:"der Tisch (Akk./Dat.)",
 answer:"den",
 signal:"stellen (Wohin?)",
 tense:"Akkusativ – Bewegung/Richtung",
-formation:"zwischen den/die/das ..."
+formation:"zwischen den Mann/die Frau/das Kind"
 },
 
 {
@@ -477,7 +467,7 @@ verb:"die Wand (Akk./Dat.)",
 answer:"der",
 signal:"hängen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"an dem/der/dem ..."
+formation:"an dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -487,7 +477,7 @@ verb:"das Bett (Akk./Dat.)",
 answer:"dem",
 signal:"schlafen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"unter dem/der/dem ..."
+formation:"unter dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -509,7 +499,7 @@ verb:"das Kino (Akk./Dat.)",
 answer:"dem",
 signal:"sein (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"in dem/der/dem ..."
+formation:"in dem Mann/der Frau/dem Kind"
 },
 
 {
@@ -531,7 +521,7 @@ verb:"der Tisch (Akk./Dat.)",
 answer:"dem",
 signal:"liegen (Wo?)",
 tense:"Dativ – Ort/Lage",
-formation:"auf dem/der/dem ..."
+formation:"auf dem Mann/der Frau/dem Kind"
 }
 
 ]
