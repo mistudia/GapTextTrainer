@@ -127,6 +127,13 @@ const EXERCISE_META = {
         zh: { title: "问路指路", description: "看看miStudia市的地图。你乘船抵达，取走你的黄色汽车，开车前往观景塔。补全路线说明。" }
     },
 
+    "en-simplepast": {
+        de: { title: "Simple Past – 50 Verben", description: "Vervollständige den Text mit der richtigen Verbform im Simple Past (regelmäßige und unregelmäßige Verben)." },
+        en: { title: "Simple Past – 50 Verbs", description: "Complete the text with the correct verb form in the simple past (regular and irregular verbs)." },
+        es: { title: "Simple Past – 50 verbos", description: "Completa el texto con la forma correcta del verbo en pasado simple (verbos regulares e irregulares)." },
+        zh: { title: "一般过去时 – 50个动词", description: "用正确的一般过去时动词形式（规则动词和不规则动词）补全课文。" }
+    },
+
     es: {
         de: { title: "Alle Zeitformen (Spanisch)", description: "Vervollständige den Text mit der richtigen Verbform." },
         en: { title: "All Tenses (Spanish)", description: "Complete the text with the correct verb form." },
@@ -200,6 +207,7 @@ const Data = {
     en: englishExercise,
     "en-picture": englishPictureExercise,
     "en-directions": englishDirectionsExercise,
+    "en-simplepast": englishSimplePast,
     es: spanishExercise,
     "es-presente": spanishPresenteRegular,
     "es-picture": spanishPictureExercise,
