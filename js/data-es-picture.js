@@ -74,7 +74,7 @@ formation:"estar + adjetivo"
 {
 before:"",
 after:" un pájaro muy alto en el cielo.",
-verb:"hay",
+verb:"ser/estar/hay",
 answer:"Hay",
 signal:"existencia (sustantivo indefinido)",
 tense:"Hay (existencia)",
@@ -104,7 +104,7 @@ formation:"detrás de"
 {
 before:"",
 after:" un lago al fondo del parque.",
-verb:"hay",
+verb:"ser/estar/hay",
 answer:"Hay",
 signal:"existencia (sustantivo indefinido)",
 tense:"Hay (existencia)",
@@ -114,7 +114,7 @@ formation:"hay + sustantivo"
 {
 before:"",
 after:" una fuente en medio del lago.",
-verb:"hay",
+verb:"ser/estar/hay",
 answer:"Hay",
 signal:"existencia (sustantivo indefinido)",
 tense:"Hay (existencia)",
@@ -124,7 +124,7 @@ formation:"hay + sustantivo"
 {
 before:"El lago ",
 after:" grande y azul.",
-verb:"adjetivo",
+verb:"ser/estar/hay",
 answer:"es",
 signal:"característica permanente",
 tense:"Ser + adjetivo (característica)",
@@ -144,7 +144,7 @@ formation:"está/están + gerundio"
 {
 before:"El parque infantil ",
 after:" cerca del lago.",
-verb:"verbo",
+verb:"ser/estar/hay",
 answer:"está",
 signal:"ubicación",
 tense:"Estar (ubicación)",
@@ -154,7 +154,7 @@ formation:"está/están"
 {
 before:"",
 after:" un parque infantil con un tobogán y columpios.",
-verb:"hay",
+verb:"ser/estar/hay",
 answer:"Hay",
 signal:"existencia (sustantivo indefinido)",
 tense:"Hay (existencia)",
@@ -194,7 +194,7 @@ formation:"al lado de"
 {
 before:"",
 after:" un cartel con indicaciones hacia el parque infantil y el lago.",
-verb:"hay",
+verb:"ser/estar/hay",
 answer:"Hay",
 signal:"existencia (sustantivo indefinido)",
 tense:"Hay (existencia)",
@@ -204,7 +204,7 @@ formation:"hay + sustantivo"
 {
 before:"El cartel ",
 after:" debajo de un árbol grande.",
-verb:"verbo",
+verb:"ser/estar/hay",
 answer:"está",
 signal:"ubicación",
 tense:"Estar (ubicación)",
@@ -224,7 +224,7 @@ formation:"está/están + gerundio"
 {
 before:"Las flores del camino ",
 after:" pequeñas y coloridas.",
-verb:"adjetivo",
+verb:"ser/estar/hay",
 answer:"son",
 signal:"tamaño/color",
 tense:"Adjetivo (descripción)",
@@ -264,7 +264,7 @@ formation:"al lado de"
 {
 before:"El banco ",
 after:" de madera.",
-verb:"material",
+verb:"ser/estar/hay",
 answer:"es",
 signal:"material",
 tense:"Ser + sustantivo (material)",
@@ -273,9 +273,9 @@ formation:"ser de + material"
 
 {
 before:"Un hombre ",
-after:" en un banco.",
-verb:"sentarse",
-answer:"está sentado",
+after:" sentado en un banco.",
+verb:"ser/estar/hay",
+answer:"está",
 signal:"estado resultante",
 tense:"Estar + participio (estado)",
 formation:"está/están + participio"
@@ -294,7 +294,7 @@ formation:"está/están + gerundio"
 {
 before:"Su mochila ",
 after:" al lado del banco.",
-verb:"verbo",
+verb:"ser/estar/hay",
 answer:"está",
 signal:"ubicación",
 tense:"Estar (ubicación)",
@@ -309,6 +309,16 @@ answer:"están corriendo",
 signal:"acción en progreso (sujeto plural)",
 tense:"Estar + gerundio (progresivo)",
 formation:"está/están + gerundio"
+},
+
+{
+before:"Uno de los dos corredores ",
+after:" una camiseta del mejor equipo de fútbol del mundo.",
+verb:"llevar",
+answer:"lleva",
+signal:"presente (descripción de ropa)",
+tense:"Presente",
+formation:"lleva/llevan"
 }
 
 ]

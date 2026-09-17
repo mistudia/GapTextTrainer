@@ -71,20 +71,20 @@ formation:"be + adjective"
 
 {
 before:"There ",
-after:" two birds high in the sky.",
+after:" a bird high in the sky.",
 verb:"there is/are",
-answer:"are",
-signal:"plural noun (two birds)",
-tense:"There is / there are — plural",
-formation:"there are + plural noun"
+answer:"is",
+signal:"singular noun (a bird)",
+tense:"There is / there are — singular",
+formation:"there is + singular noun"
 },
 
 {
-before:"They ",
+before:"It ",
 after:" above the park.",
 verb:"fly",
-answer:"are flying",
-signal:"happening right now (plural subject)",
+answer:"is flying",
+signal:"happening right now",
 tense:"Present continuous",
 formation:"is/are + verb-ing"
 },
@@ -285,6 +285,16 @@ after:" along the path near the lake.",
 verb:"run",
 answer:"are running",
 signal:"happening right now (plural subject)",
+tense:"Present continuous",
+formation:"is/are + verb-ing"
+},
+
+{
+before:"One of the two joggers ",
+after:" a jersey of the best football club in the world.",
+verb:"wear",
+answer:"is wearing",
+signal:"happening right now",
 tense:"Present continuous",
 formation:"is/are + verb-ing"
 }
