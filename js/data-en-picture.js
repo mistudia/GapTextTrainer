@@ -72,7 +72,7 @@ formation:"be + adjective"
 {
 before:"There ",
 after:" a bird high in the sky.",
-verb:"there is/are",
+verb:"to be",
 answer:"is",
 signal:"singular noun (a bird)",
 tense:"There is / there are — singular",
@@ -102,7 +102,7 @@ formation:"behind"
 {
 before:"There ",
 after:" a lake at the back of the park.",
-verb:"there is/are",
+verb:"to be",
 answer:"is",
 signal:"singular noun (a lake)",
 tense:"There is / there are — singular",
@@ -112,7 +112,7 @@ formation:"there is + singular noun"
 {
 before:"There ",
 after:" a fountain in the middle of the lake.",
-verb:"there is/are",
+verb:"to be",
 answer:"is",
 signal:"singular noun (a fountain)",
 tense:"There is / there are — singular",
@@ -142,7 +142,7 @@ formation:"near"
 {
 before:"There ",
 after:" a playground with a slide and swings.",
-verb:"there is/are",
+verb:"to be",
 answer:"is",
 signal:"singular noun (a playground)",
 tense:"There is / there are — singular",
@@ -182,7 +182,7 @@ formation:"next to"
 {
 before:"There ",
 after:" a sign with directions to the playground and the lake.",
-verb:"there is/are",
+verb:"to be",
 answer:"is",
 signal:"singular noun (a sign)",
 tense:"There is / there are — singular",
