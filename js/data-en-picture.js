@@ -62,7 +62,7 @@ const englishPictureExercise = {
 {
 before:"The sky ",
 after:" blue with a few white clouds.",
-verb:"adjective",
+verb:"to be",
 answer:"is",
 signal:"color/state",
 tense:"Adjective (description)",
@@ -82,7 +82,7 @@ formation:"there is + singular noun"
 {
 before:"It ",
 after:" above the park.",
-verb:"fly",
+verb:"to fly",
 answer:"is flying",
 signal:"happening right now",
 tense:"Present continuous",
@@ -90,10 +90,10 @@ formation:"is/are + verb-ing"
 },
 
 {
-before:"The city ",
-after:" behind the trees, in the distance.",
+before:"The city is ",
+after:" the trees, in the distance.",
 verb:"preposition",
-answer:"is behind",
+answer:"behind",
 signal:"position: at the back",
 tense:"Preposition of place",
 formation:"behind"
@@ -122,7 +122,7 @@ formation:"there is + singular noun"
 {
 before:"A few ducks ",
 after:" in the lake.",
-verb:"swim",
+verb:"to swim",
 answer:"are swimming",
 signal:"happening right now (plural subject)",
 tense:"Present continuous",
@@ -130,10 +130,10 @@ formation:"is/are + verb-ing"
 },
 
 {
-before:"The playground ",
+before:"The playground is ",
 after:" the lake.",
 verb:"preposition",
-answer:"is near",
+answer:"near",
 signal:"position: close to",
 tense:"Preposition of place",
 formation:"near"
@@ -152,7 +152,7 @@ formation:"there is + singular noun"
 {
 before:"Some children ",
 after:" on the playground.",
-verb:"play",
+verb:"to play",
 answer:"are playing",
 signal:"happening right now (plural subject)",
 tense:"Present continuous",
@@ -162,7 +162,7 @@ formation:"is/are + verb-ing"
 {
 before:"A family ",
 after:" a picnic on the grass.",
-verb:"have",
+verb:"to have",
 answer:"is having",
 signal:"happening right now",
 tense:"Present continuous",
@@ -170,10 +170,10 @@ formation:"is/are + verb-ing"
 },
 
 {
-before:"The picnic blanket ",
+before:"The picnic blanket is ",
 after:" the playground.",
 verb:"preposition",
-answer:"is next to",
+answer:"next to",
 signal:"position: beside",
 tense:"Preposition of place",
 formation:"next to"
@@ -190,10 +190,10 @@ formation:"there is + singular noun"
 },
 
 {
-before:"The sign ",
+before:"The sign is ",
 after:" a big tree.",
 verb:"preposition",
-answer:"is under",
+answer:"under",
 signal:"position: below",
 tense:"Preposition of place",
 formation:"under"
@@ -202,7 +202,7 @@ formation:"under"
 {
 before:"A small dog ",
 after:" the ground near the sign.",
-verb:"smell",
+verb:"to smell",
 answer:"is smelling",
 signal:"happening right now",
 tense:"Present continuous",
@@ -212,7 +212,7 @@ formation:"is/are + verb-ing"
 {
 before:"The flowers along the path ",
 after:" small and colorful.",
-verb:"adjective",
+verb:"to be",
 answer:"are",
 signal:"size/color",
 tense:"Adjective (description)",
@@ -222,7 +222,7 @@ formation:"be + adjective"
 {
 before:"A woman and her daughter ",
 after:" along the path.",
-verb:"walk",
+verb:"to walk",
 answer:"are walking",
 signal:"happening right now",
 tense:"Present continuous",
@@ -232,7 +232,7 @@ formation:"is/are + verb-ing"
 {
 before:"Their dog ",
 after:" next to them on a leash.",
-verb:"walk",
+verb:"to walk",
 answer:"is walking",
 signal:"happening right now",
 tense:"Present continuous",
@@ -240,10 +240,10 @@ formation:"is/are + verb-ing"
 },
 
 {
-before:"The trash can ",
+before:"The trash can is ",
 after:" the lamppost.",
 verb:"preposition",
-answer:"is next to",
+answer:"next to",
 signal:"position: beside",
 tense:"Preposition of place",
 formation:"next to"
@@ -252,7 +252,7 @@ formation:"next to"
 {
 before:"A man ",
 after:" on a bench.",
-verb:"sit",
+verb:"to sit",
 answer:"is sitting",
 signal:"happening right now",
 tense:"Present continuous",
@@ -262,7 +262,7 @@ formation:"is/are + verb-ing"
 {
 before:"He ",
 after:" a book.",
-verb:"read",
+verb:"to read",
 answer:"is reading",
 signal:"happening right now",
 tense:"Present continuous",
@@ -270,10 +270,10 @@ formation:"is/are + verb-ing"
 },
 
 {
-before:"His bag ",
+before:"His bag is ",
 after:" the bench.",
 verb:"preposition",
-answer:"is next to",
+answer:"next to",
 signal:"position: beside",
 tense:"Preposition of place",
 formation:"next to"
@@ -282,7 +282,7 @@ formation:"next to"
 {
 before:"Two joggers ",
 after:" along the path near the lake.",
-verb:"run",
+verb:"to run",
 answer:"are running",
 signal:"happening right now (plural subject)",
 tense:"Present continuous",
@@ -292,7 +292,7 @@ formation:"is/are + verb-ing"
 {
 before:"One of the two joggers ",
 after:" a jersey of the best football club in the world.",
-verb:"wear",
+verb:"to wear",
 answer:"is wearing",
 signal:"happening right now",
 tense:"Present continuous",
