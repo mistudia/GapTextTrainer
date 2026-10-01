@@ -10,7 +10,20 @@ const App = {
     data: null,
     hintState: [],
     inputs: [],
-    immediateFeedback: true
+    immediateFeedback: true,
+    lastFocusedInput: null,
+    solutionsShown: false,
+    savedInputs: []
+};
+
+// Sonderzeichen, die pro Übungssprache per Klick eingefügt werden
+// können (z. B. spanische Akzente und ñ auf einer deutschen Tastatur).
+// Der Schlüssel ist der Teil der Sprach-ID vor einem "-"
+// (z. B. "es" für "es", "es-ii", "es-subj", ...).
+const SPECIAL_CHARS = {
+    es: ["á", "é", "í", "ó", "ú", "ñ", "ü", "¿", "¡"],
+    fr: ["à", "â", "ç", "é", "è", "ê", "ë", "î", "ï", "ô", "ù", "û", "ü", "œ"],
+    de: ["ä", "ö", "ü", "ß"]
 };
 
 // Menüsprache: übersetzt Button-Beschriftungen, Hinweis-Label
@@ -25,11 +38,13 @@ const UI_TEXT = {
         signal: "💡 Signal",
         tense: "💡 Regel",
         formation: "💡 Beispiel",
+        explanation: "💡 Erklärung",
         perfect: "🏆 Perfekt! Alle Antworten sind richtig.",
         good: "👏 Sehr gut!",
         ok: "👍 Gut gemacht. Noch ein wenig üben.",
         tryAgain: "📚 Weiter üben!",
         solutionsShown: "Die Lösungen wurden angezeigt.",
+        ownAnswersShown: "Deine eigenen Eingaben wurden wiederhergestellt.",
         feedbackToggle: "Sofortige Rückmeldung beim Ausfüllen (statt nur bei \"Auswerten\")"
     },
 
@@ -40,11 +55,13 @@ const UI_TEXT = {
         signal: "💡 Hint",
         tense: "💡 Rule",
         formation: "💡 Pattern",
+        explanation: "💡 Explanation",
         perfect: "🏆 Perfect! Excellent work!",
         good: "👏 Very good!",
         ok: "👍 Good job. Keep practising.",
         tryAgain: "📚 Keep practising!",
         solutionsShown: "The solutions have been shown.",
+        ownAnswersShown: "Your own answers have been restored.",
         feedbackToggle: "Immediate feedback while typing (instead of only after \"Check\")"
     },
 
@@ -55,11 +72,13 @@ const UI_TEXT = {
         signal: "💡 Indicador",
         tense: "💡 Regla",
         formation: "💡 Ejemplo",
+        explanation: "💡 Explicación",
         perfect: "🏆 ¡Perfecto! ¡Excelente trabajo!",
         good: "👏 ¡Muy bien!",
         ok: "👍 Buen trabajo. Sigue practicando.",
         tryAgain: "📚 Sigue practicando.",
         solutionsShown: "Se han mostrado las soluciones.",
+        ownAnswersShown: "Se han restaurado tus propias respuestas.",
         feedbackToggle: "Retroalimentación inmediata al escribir (en vez de solo al pulsar \"Comprobar\")"
     },
 
@@ -70,11 +89,13 @@ const UI_TEXT = {
         signal: "💡 提示",
         tense: "💡 规则",
         formation: "💡 例子",
+        explanation: "💡 解释",
         perfect: "🏆 太棒了！全部正确！",
         good: "👏 很好！",
         ok: "👍 做得不错，继续练习。",
         tryAgain: "📚 继续加油！",
         solutionsShown: "答案已显示。",
+        ownAnswersShown: "已恢复你自己填写的内容。",
         feedbackToggle: "输入时立即反馈（而不是只有点击\"检查\"后才反馈）"
     }
 
@@ -307,6 +328,7 @@ function loadLanguage(language) {
     updateInterface();
     buildExercise();
     updateImage();
+    updateSpecialChars();
 
 }
 
@@ -393,12 +415,27 @@ function buildExercise() {
 
     App.inputs = [];
     App.hintState = [];
+    App.solutionsShown = false;
+    App.savedInputs = [];
 
     App.data.story.forEach((item, index) => {
 
         App.hintState.push(0);
 
 const hasSecondGap = item.answer2 !== undefined;
+
+// Bei Items mit zwei Lücken, die zu zwei VERSCHIEDENEN Verben
+// gehören, wird das verb-Feld als "verbo1 / verbo2" geschrieben
+// (mit Leerzeichen um den Schrägstrich). In diesem Fall soll jede
+// Lücke ihren eigenen Hinweis direkt hinter ihrem Eingabefeld
+// bekommen, statt beide Verben gemeinsam erst am Ende zu zeigen.
+const twoVerbs =
+    hasSecondGap && item.verb && item.verb.includes(" / ")
+        ? item.verb.split(" / ")
+        : null;
+
+const firstGapVerb = twoVerbs ? twoVerbs[0] : null;
+const lastGapVerb = twoVerbs ? twoVerbs[1] : item.verb;
 
 let html = `
 ${textWithPinyin(item.before, item.beforePinyin)}
@@ -412,6 +449,12 @@ ${textWithPinyin(item.before, item.beforePinyin)}
 `;
 
 if (hasSecondGap) {
+
+    if (firstGapVerb) {
+        html += `
+<span class="verb">(${firstGapVerb})</span>
+`;
+    }
 
     html += `
 ${textWithPinyin(item.mid, item.midPinyin)}
@@ -429,7 +472,7 @@ ${textWithPinyin(item.mid, item.midPinyin)}
 html += `
 <span class="afterGap">
 
-    <span class="verb">(${item.verb})</span>
+    <span class="verb">(${lastGapVerb})</span>
 
     <button
         type="button"
@@ -478,6 +521,12 @@ function initInputs() {
         // field belongs to.
 
         input.addEventListener("keydown", handleKeyDown);
+
+        input.addEventListener("focus", () => {
+
+            App.lastFocusedInput = input;
+
+        });
 
         input.addEventListener("blur", () => {
 
@@ -548,6 +597,54 @@ function handleKeyDown(event) {
             checkSingleInput(input, true);
         }
 
+        return;
+
+    }
+
+    if (event.key === "ArrowDown") {
+
+        event.preventDefault();
+        focusNext(index);
+        return;
+
+    }
+
+    if (event.key === "ArrowUp") {
+
+        event.preventDefault();
+        focusPrevious(index);
+        return;
+
+    }
+
+    if (event.key === "ArrowRight") {
+
+        const atEnd =
+            input.selectionStart === input.value.length &&
+            input.selectionEnd === input.value.length;
+
+        if (atEnd) {
+            event.preventDefault();
+            focusNext(index);
+        }
+
+        return;
+
+    }
+
+    if (event.key === "ArrowLeft") {
+
+        const atStart =
+            input.selectionStart === 0 &&
+            input.selectionEnd === 0;
+
+        if (atStart) {
+            event.preventDefault();
+            focusPrevious(index);
+        }
+
+        return;
+
     }
 
 }
@@ -557,6 +654,16 @@ function focusNext(index) {
     if (index < App.inputs.length - 1) {
 
         App.inputs[index + 1].focus();
+
+    }
+
+}
+
+function focusPrevious(index) {
+
+    if (index > 0) {
+
+        App.inputs[index - 1].focus();
 
     }
 
@@ -594,6 +701,12 @@ const hints = [
     `${labels.formation}: ${item.formation}`
 
 ];
+
+if (item.explanation) {
+
+    hints.push(`${labels.explanation}: ${item.explanation}`);
+
+}
 
     const level =
         App.hintState[index] % hints.length;
@@ -727,6 +840,22 @@ else if (percent >= 80) {
 
 function showSolutions() {
 
+    if (App.solutionsShown) {
+
+        restoreOwnInputs();
+        return;
+
+    }
+
+    // Eigene Eingaben (Wert + Markierung) merken, bevor sie
+    // durch die Lösungen überschrieben werden, damit der
+    // Lösungen-Button sie beim nächsten Klick wiederherstellen kann.
+    App.savedInputs = App.inputs.map(input => ({
+        value: input.value,
+        correct: input.classList.contains("correct"),
+        wrong: input.classList.contains("wrong")
+    }));
+
     App.inputs.forEach(input => {
 
         const itemIndex =
@@ -752,6 +881,38 @@ function showSolutions() {
 
     document.getElementById("result").innerHTML =
         UI_TEXT[App.uiLanguage].solutionsShown;
+
+    App.solutionsShown = true;
+
+}
+
+function restoreOwnInputs() {
+
+    App.inputs.forEach((input, index) => {
+
+        const saved = App.savedInputs[index];
+
+        input.value = saved ? saved.value : "";
+
+        input.classList.remove(
+            "correct",
+            "wrong",
+            "flash-correct",
+            "flash-wrong"
+        );
+
+        if (saved && saved.correct) {
+            input.classList.add("correct");
+        } else if (saved && saved.wrong) {
+            input.classList.add("wrong");
+        }
+
+    });
+
+    document.getElementById("result").innerHTML =
+        UI_TEXT[App.uiLanguage].ownAnswersShown;
+
+    App.solutionsShown = false;
 
 }
 
@@ -845,6 +1006,82 @@ function resetExercise() {
 function reloadCurrentLanguage() {
 
     loadLanguage(App.language);
+
+}
+
+/* ----------------------------------------------------------
+   Sonderzeichen-Leiste (Akzente, ñ, ß, ...)
+   Zeigt je nach Übungssprache passende Sonderzeichen an,
+   die per Klick in das zuletzt fokussierte Eingabefeld
+   eingefügt werden - praktisch z. B. auf einer deutschen
+   Tastatur ohne spanisches Tastaturlayout.
+---------------------------------------------------------- */
+
+function updateSpecialChars() {
+
+    const container =
+        document.getElementById("specialCharsBar");
+
+    if (!container) {
+        return;
+    }
+
+    const prefix = App.language.split("-")[0];
+    const chars = SPECIAL_CHARS[prefix];
+
+    container.innerHTML = "";
+
+    if (!chars) {
+
+        container.style.display = "none";
+        return;
+
+    }
+
+    container.style.display = "flex";
+
+    chars.forEach(char => {
+
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.className = "special-char-btn";
+        button.textContent = char;
+
+        button.addEventListener("click", () => {
+            insertSpecialChar(char);
+        });
+
+        container.appendChild(button);
+
+    });
+
+}
+
+function insertSpecialChar(char) {
+
+    const target =
+        (App.lastFocusedInput && App.inputs.includes(App.lastFocusedInput))
+            ? App.lastFocusedInput
+            : App.inputs[0];
+
+    if (!target) {
+        return;
+    }
+
+    const start = target.selectionStart ?? target.value.length;
+    const end = target.selectionEnd ?? target.value.length;
+    const value = target.value;
+
+    target.value =
+        value.slice(0, start) + char + value.slice(end);
+
+    const newPos = start + char.length;
+
+    target.focus();
+    target.setSelectionRange(newPos, newPos);
+
+    target.dispatchEvent(new Event("input", { bubbles: true }));
 
 }
 

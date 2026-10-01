@@ -71,7 +71,8 @@ verb:"conducir",
 answer:"condujo",
 signal:"acción puntual",
 tense:"Pretérito indefinido",
-formation:"habló"
+formation:"habló",
+explanation:"Aunque \"toda la noche\" indica duración, aquí se presenta como un episodio completo y cerrado (condujo y llegó a tiempo), no como un hábito ni una descripción de fondo. Por eso se usa el indefinido, aunque haya durado horas."
 },
 
 {
@@ -305,7 +306,8 @@ verb:"sentir",
 answer:"sintió",
 signal:"acción puntual",
 tense:"Pretérito indefinido",
-formation:"habló"
+formation:"habló",
+explanation:"El miedo está ligado a un evento concreto y puntual (el terremoto), no es un estado habitual o de fondo. El indefinido marca el momento en que sintió esa reacción, no una emoción continua sin límites."
 },
 
 {
@@ -367,7 +369,8 @@ verb:"repetir",
 answer:"repitió",
 signal:"acción puntual",
 tense:"Pretérito indefinido",
-formation:"habló"
+formation:"habló",
+explanation:"\"Dos veces\" es un número contable de repeticiones: una acción completada y delimitada. Poder contar cuántas veces ocurrió algo es una señal típica de indefinido, no de imperfecto."
 },
 
 {
@@ -399,7 +402,8 @@ answer:"dibujaban",
 answer2:"corregía",
 signal:"mientras (acciones simultáneas)",
 tense:"Imperfecto + Imperfecto (acciones simultáneas de fondo)",
-formation:"hablaba / hablaba"
+formation:"hablaba / hablaba",
+explanation:"\"Mientras\" + dos acciones simultáneas sin principio ni fin marcado: ambas se narran como un telón de fondo en progreso, no como hechos completados. Por eso las dos van en imperfecto."
 },
 
 {
@@ -409,7 +413,8 @@ verb:"conocer",
 answer:"conocía",
 signal:"al principio",
 tense:"Pretérito imperfecto",
-formation:"hablaba"
+formation:"hablaba",
+explanation:"Aquí \"conocer\" en imperfecto describe un estado (no conocía a nadie) que existía durante un periodo, no un evento puntual. En indefinido, \"conoció\" significaría \"conoció por primera vez\" (un cambio de estado puntual) - un significado distinto."
 },
 
 {
@@ -429,7 +434,8 @@ verb:"vivir",
 answer:"vivió",
 signal:"el año pasado",
 tense:"Pretérito indefinido",
-formation:"habló"
+formation:"habló",
+explanation:"\"El año pasado\" marca el año como una unidad de tiempo cerrada y completa: toda su estancia en Madrid se presenta como un capítulo terminado. Por eso se usa el indefinido, y no una descripción de fondo con imperfecto."
 },
 
 {
@@ -461,7 +467,8 @@ verb:"seguir",
 answer:"siguió",
 signal:"acción puntual",
 tense:"Pretérito indefinido",
-formation:"habló"
+formation:"habló",
+explanation:"\"Al pie de la letra\" describe cómo completó una instrucción concreta de una sola vez: una acción puntual y completa. Por eso se usa el indefinido."
 },
 
 {
