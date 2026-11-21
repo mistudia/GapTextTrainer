@@ -932,3 +932,7 @@ input:focus{
     border-color:var(--primary);
 
 }
+/* Businessplan: Links zu den anderen miStudia-Apps */
+.mistudia-apps { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 10px 0; }
+.mistudia-apps a { padding: 7px 14px; border-radius: 999px; border: 2px solid #1976d2; color: #1565c0; background: #ffffff; text-decoration: none; font-weight: 700; }
+.mistudia-apps a:hover { background: #e8f1ff; }
